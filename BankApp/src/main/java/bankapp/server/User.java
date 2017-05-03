@@ -9,6 +9,8 @@ public class User {
 	private String username;
 	private String pass;
 	private String email;
+	private String answer;
+	
 	public User(String username, String pass, String email){
 		this.username = username;
 		this.pass = pass;
@@ -31,6 +33,12 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}
 	public String toString(){
 		return username;

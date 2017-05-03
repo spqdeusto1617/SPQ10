@@ -27,4 +27,16 @@ public class RMIServiceLocator {
 		}
 		return false;
 	}
+
+	
+	public boolean loginAdmin(String user, String pass){
+		try{
+			System.out.println("RMIServiceLocator calling -> EBManager");
+			return bm.login(user, pass);
+		} catch (RemoteException e) {
+			System.out.println("RemoteException: Login error");
+		}
+		return false;
+	}
+	
 }

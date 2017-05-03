@@ -38,6 +38,31 @@ public class bankDAO implements IbankDAO {
     		pm.close();    				
 		return user;
 	}
+	
+	public User getAdmin(String user) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		/* By default only 1 level is retrieved from the db
+		 * so if we wish to fetch more than one level, we must indicate it
+		 */
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		
+		Transaction tx = pm.currentTransaction();
+		Admin admin = null;
+			System.out.println("   * Retrieving an Extent for User.");
+			
+			tx.begin();
+			System.out.println("Retrieving User: " + user);
+			Query<?> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE username == '" + user + "'");
+	    	query.setUnique(true);
+	    	admin = (Admin)query.execute();
+			tx.commit();			
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+
+    		pm.close();    				
+		return admin;
+	}
 
 	@Override
 	public void storeUser(User user) {
@@ -58,6 +83,67 @@ public class bankDAO implements IbankDAO {
 				
     		pm.close();
 	    }
+	}
+	
+	@Override
+	public void updateUser(User user) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	    
+	    try {
+	    	tx.begin();
+	    	pm.makePersistent(user);
+	    	tx.commit();
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error updating User : " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		   	}
+				
+	   		pm.close();
+	     }
+	}
+
+	@Override
+	public void storeAccount(Account acc) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	   
+	    try {
+	       tx.begin();
+	       System.out.println("   * Storing user: " + acc);
+	       pm.makePersistent(acc);
+	       tx.commit();
+	    } catch (Exception ex) {
+	    	System.out.println("   $ Error storing user: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+				
+    		pm.close();
+	    }
+	}
+
+	@Override
+	public void updateAccount(Account acc) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	    
+	    try {
+	    	tx.begin();
+	    	pm.makePersistent(acc);
+	    	tx.commit();
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error updating User : " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		   	}
+				
+	   		pm.close();
+	     }
 	}
 
 }

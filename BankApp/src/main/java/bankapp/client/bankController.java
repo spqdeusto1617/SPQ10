@@ -22,7 +22,19 @@ public class bankController {
 			System.out.println("Login Unsuccessfull");
 			return false;
 		}
-	
-
 	}
+
+	public boolean loginAdmin(String user, String pass){
+		System.out.println("Controller calling -> RMIServiceLocator");
+		if(rsl.loginAdmin(user, pass)){
+			//new Booking_Search(this);
+			System.out.println("Login Succesfull");
+			return true;
+		}
+		else{
+			System.out.println("Login Unsuccessfull");
+			return false;
+		}
+	}
+	
 }

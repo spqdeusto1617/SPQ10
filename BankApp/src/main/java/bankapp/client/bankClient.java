@@ -16,7 +16,6 @@ public class bankClient {
 	    System.out.println("Please insert user pass");
 	    pass = keyboard.nextLine();
 		}while(!bController.login(username, pass));
-		
-	}
 
+	}
 }

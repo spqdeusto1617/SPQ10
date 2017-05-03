@@ -9,6 +9,9 @@ public class Account {
 	*/
 	private int money;
 	private int numcli;
+	public Account(){
+		
+	}
 	public int getnumAcc() {
 		return numAcc;
 	}

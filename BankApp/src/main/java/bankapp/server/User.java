@@ -2,19 +2,14 @@ package bankapp.server;
 
 import java.util.HashMap;
 
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.PrimaryKey;
-
-@PersistenceCapable(detachable = "true")
-public class User {
-	@PrimaryKey
-	private String username;
-	private String pass;
+import javax.jdo.annotations.*;
+@PersistenceCapable
+@Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
+public class User extends Account{
 	private String email;
-	private HashMap<String, Account> accounts;
+	private HashMap<String, bankAccount> accounts;
 	public User(String username, String pass, String email){
-		this.username = username;
-		this.pass = pass;
+		super(username, pass);
 		this.email = email;
 		this.accounts = new HashMap<>();
 	}
@@ -25,28 +20,16 @@ public class User {
 		this.accounts.get(accNum).addmoney(money);
 	}
 	public void createAccount(){
-		Account acc = new Account();
+		bankAccount acc = new bankAccount();
 		addAccount(acc);
 	}
-	public void addAccount(Account acc){
+	public void addAccount(bankAccount acc){
 		this.accounts.put(Integer.toString(acc.getnumAcc()), acc);
-	}
-	public String getUsername() {
-		return username;
-	}
-	public String getPass() {
-		return pass;
-	}
-	public void setPass(String pass) {
-		this.pass = pass;
 	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String toString(){
-		return username;
 	}
 }

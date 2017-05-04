@@ -18,13 +18,13 @@ public class RMIServiceLocator {
 		}    
 	}
 	
-	public boolean login(String user, String pass){
+	public char login(String user, String pass){
 		try{
 			System.out.println("RMIServiceLocator calling -> EBManager");
 			return bm.login(user, pass);
 		} catch (RemoteException e) {
 			System.out.println("RemoteException: Login error");
 		}
-		return false;
+		return 'e';
 	}
 }

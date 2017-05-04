@@ -11,18 +11,8 @@ public class bankController {
 		rsl.setService(ip, port, serviceName);
 	}
 	
-	public boolean login(String user, String pass){
+	public char login(String user, String pass){
 		System.out.println("Controller calling -> RMIServiceLocator");
-		if(rsl.login(user, pass)){
-			//new Booking_Search(this);
-			System.out.println("Login Succesfull");
-			return true;
-		}
-		else{
-			System.out.println("Login Unsuccessfull");
-			return false;
-		}
-	
-
+		return rsl.login(user, pass);
 	}
 }

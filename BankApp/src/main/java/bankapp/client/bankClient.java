@@ -15,7 +15,8 @@ public class bankClient {
 	    username = keyboard.nextLine();
 	    System.out.println("Please insert user pass");
 	    pass = keyboard.nextLine();
-		}while(!bController.login(username, pass));
-
+		}while(bController.login(username, pass) == 'e');
+		if(bController.login(username, pass) == 'a');
+		else if(bController.login(username, pass) == 'u');
 	}
 }

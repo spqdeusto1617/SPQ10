@@ -5,6 +5,6 @@ import java.rmi.RemoteException;
 
 public interface IBManager extends Remote {
 
-	public boolean login(String user, String pass) throws RemoteException;
+	public char login(String user, String pass) throws RemoteException;
 	
 }

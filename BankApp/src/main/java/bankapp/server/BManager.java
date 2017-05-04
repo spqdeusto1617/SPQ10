@@ -20,24 +20,28 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		this.serverAddress = serverAddress;
 		this.port0 = Integer.parseInt(port0);
 		this.servName = servName;
-		bd.storeUser(new User("user", "pass", "user@mail.com"));
+		bd.storeAccount(new User("user", "pass", "user@mail.com"));
 	}
 
-	public boolean login(String username, String pass) throws RemoteException {
+	public char login(String username, String pass) throws RemoteException {
 		try{
-			User login = bd.getUser(username);
+			Account login = bd.getAccount(username);
 			if(login.getPass().equals(pass)){
 				System.out.println("-- User : " + username + " // Pass : " + pass + " --");
 				System.out.println("login successful!");
-			return true;
+				if(login instanceof Account)
+					return 'a';
+				else if (login instanceof User)
+					return 'u';
+				else return 'e';
 			}
 			else{
 				System.out.println("Error: found user but password does not coincide");
-				return false;
+				return 'e';
 			}
 		}catch(Exception ex){
 			System.out.println("Error retrieving user from DB. Check if the user exists");
-			return false;
+			return 'e';
 		}
 	}
 

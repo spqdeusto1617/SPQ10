@@ -1,12 +1,12 @@
 package bankapp.server;
 
 import java.util.HashMap;
-
 import javax.jdo.annotations.*;
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
 public class User extends Account{
 	private String email;
+	@NotPersistent
 	private HashMap<String, bankAccount> accounts;
 	public User(String username, String pass, String email){
 		super(username, pass);

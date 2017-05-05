@@ -6,12 +6,11 @@ public class bankController {
 	
 	public bankController(String ip, String port, String serviceName){
 		rsl = new RMIServiceLocator();
-		//Ventanas
-		//new Login(this);
 		rsl.setService(ip, port, serviceName);
 	}
 	
 	public char login(String user, String pass){
+		//calls the service locator login method from the controller
 		System.out.println("Controller calling -> RMIServiceLocator");
 		return rsl.login(user, pass);
 	}

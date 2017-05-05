@@ -2,7 +2,8 @@ package bankapp.server;
 
 import javax.jdo.annotations.*;
 
-
+//JDO Persistence, use one table for storing both Account (superclass)
+//User, and Admin (inherited classes)
 @PersistenceCapable
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
 public class Account {

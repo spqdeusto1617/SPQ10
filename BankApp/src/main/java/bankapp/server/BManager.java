@@ -14,7 +14,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	String serverAddress;
 	int port0;
 	String servName;
-
+	//Manager is in charge of the providing the client with methods (facade)
 	public BManager(String serverAddress, String port0, String servName) throws RemoteException {
 		super();
 		this.serverAddress = serverAddress;

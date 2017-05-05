@@ -7,12 +7,14 @@ import javax.jdo.Query;
 import javax.jdo.Transaction;
 
 
+//Class in charge of communications with the database
 public class bankDAO implements IbankDAO {
 	private PersistenceManagerFactory pmf;
 	public bankDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 }
 
+	//gets account information from the db with the username
 	@Override
 	public Account getAccount(String username) {
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -38,6 +40,7 @@ public class bankDAO implements IbankDAO {
 		return account;
 	}
 
+	//stores account object in the database
 	public void storeAccount(Account acc) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();

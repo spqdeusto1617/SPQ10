@@ -20,8 +20,8 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		this.serverAddress = serverAddress;
 		this.port0 = Integer.parseInt(port0);
 		this.servName = servName;
-		bd.storeAccount((Account) new Admin("adminuser", "adminpass"));
-		bd.storeAccount((Account) new User("user", "pass", "user@mail.com"));
+		bd.storeAccount(new Admin("adminuser", "adminpass"));
+		bd.storeAccount(new User("user", "pass", "user@mail.com"));
 	}
 
 	public char login(String username, String pass) throws RemoteException {

@@ -11,7 +11,7 @@ public class BankClient {
 	    String username = keyboard.nextLine();
 	    System.out.println("Please insert user pass");
 	    String pass = keyboard.nextLine();
-	    bankController bController = new bankController(args[0], args[1], args[2]);
+	    BankController bController = new BankController(args[0], args[1], args[2]);
 	    bController.login(username, pass);
 	}
 

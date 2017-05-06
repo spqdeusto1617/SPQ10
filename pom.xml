@@ -129,7 +129,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.6.0</version>
 						<configuration>
-							<mainClass>bankapp.server.bankServer</mainClass>
+							<mainClass>bankapp.server.BankServer</mainClass>
 							<systemProperties>
 								<systemProperty>
 									<key>java.security.manager</key>
@@ -164,7 +164,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.6.0</version>
 						<configuration>
-							<mainClass>bankapp.client.bankClient</mainClass>
+							<mainClass>bankapp.client.BankClient</mainClass>
 							<systemProperties>
 								<systemProperty>
 									<key>java.security.manager</key>

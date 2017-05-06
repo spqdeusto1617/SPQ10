@@ -26,6 +26,4 @@ public class BankServer {
 			e.printStackTrace();
 		}
 	}
-
 }
-

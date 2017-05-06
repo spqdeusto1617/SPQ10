@@ -5,7 +5,7 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-public class BankDAO implements IbankDAO {
+public class BankDAO implements IBankDAO {
 
 	private PersistenceManagerFactory pmf;
 	public BankDAO(){

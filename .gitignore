@@ -1,0 +1,25 @@
+
+#Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+blog/bin/
+**/.tern-project
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven
+log/
+target/
+
+## File-based project format
+*.ipr
+*.iws
+*.iml
+
+.idea/
+*.cmd
+

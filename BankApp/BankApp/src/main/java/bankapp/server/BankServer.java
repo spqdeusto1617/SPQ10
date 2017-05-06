@@ -3,7 +3,8 @@ package bankapp.server;
 import java.rmi.Naming;
 
 
-public class bankServer {
+public class BankServer {
+
 	public static void main(String args[]) {
 		if (args.length != 3) {
 			System.exit(0);
@@ -16,7 +17,7 @@ public class bankServer {
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
-			IBManager EBServer = new BManager(args[0], args[1], args[2]);
+			IBManager EBServer = new BManager();
 			Naming.rebind(name, EBServer);
 			System.out.println("- EasyBookingServer '" + name + "' active and waiting...");
             System.in.read();	

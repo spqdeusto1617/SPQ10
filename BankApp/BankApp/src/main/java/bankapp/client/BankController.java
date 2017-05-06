@@ -1,10 +1,10 @@
 package bankapp.client;
 
-public class bankController {
+public class BankController {
 	
 	private RMIServiceLocator rsl;
 	
-	public bankController(String ip, String port, String serviceName){
+	public BankController(String ip, String port, String serviceName){
 		rsl = new RMIServiceLocator();
 		//Ventanas
 		//new Login(this);
@@ -22,7 +22,5 @@ public class bankController {
 			System.out.println("Login Unsuccessfull");
 			return false;
 		}
-	
-
 	}
 }

@@ -6,12 +6,14 @@ import java.rmi.RemoteException;
 import bankapp.server.IBManager;
 
 public class RMIServiceLocator {
-	
+
+	/* client */
 	private IBManager bm;
 	
 	public void setService(String ip, String port, String serviceName){    
 		String name = "//" + ip + ":" + port + "/" + serviceName;
 		try {
+		    /* request to the server */
 			bm = (IBManager) java.rmi.Naming.lookup(name);
 		}catch (MalformedURLException | RemoteException | NotBoundException e) {
 		e.printStackTrace();

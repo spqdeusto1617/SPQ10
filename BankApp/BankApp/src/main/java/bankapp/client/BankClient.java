@@ -2,7 +2,7 @@ package bankapp.client;
 
 import java.util.Scanner;
 
-public class bankClient {
+public class BankClient {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

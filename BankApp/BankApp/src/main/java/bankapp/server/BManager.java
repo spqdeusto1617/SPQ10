@@ -10,16 +10,10 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	bankDAO bd = new bankDAO();
-	String serverAddress;
-	int port0;
-	String servName;
+	BankDAO bd = new BankDAO();
 
-	public BManager(String serverAddress, String port0, String servName) throws RemoteException {
+	public BManager() throws RemoteException {
 		super();
-		this.serverAddress = serverAddress;
-		this.port0 = Integer.parseInt(port0);
-		this.servName = servName;
 		bd.storeUser(new User("user", "pass", "user@mail.com"));
 	}
 
@@ -27,6 +21,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		try{
 			User login = bd.getUser(username);
 			if(login.getPass().equals(pass)){
+				/* TODO use logger */
 				System.out.println("-- User : " + username + " // Pass : " + pass + " --");
 				System.out.println("login successful!");
 			return true;

@@ -5,9 +5,10 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-public class bankDAO implements IbankDAO {
+public class BankDAO implements IbankDAO {
+
 	private PersistenceManagerFactory pmf;
-	public bankDAO(){
+	public BankDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 }
 

@@ -1,5 +1,7 @@
 package bankapp.server;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
@@ -8,12 +10,20 @@ public class User {
 	@PrimaryKey
 	private String username;
 	private String pass;
+	@Email
 	private String email;
+
 	public User(String username, String pass, String email){
 		this.username = username;
 		this.pass = pass;
 		this.email = email;
 	}
+
+	/* Default contructor */
+	public User() {
+
+    }
+
 	public String getUsername() {
 		return username;
 	}

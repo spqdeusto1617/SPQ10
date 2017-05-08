@@ -60,12 +60,14 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	public void createAccount(String user) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		userObj.createAccount();
+		bd.storeAccount(userObj);
 	}
 
 	@Override
 	public void addFunds(String user, String accNum, int money) {
 		User userObj = (User) bd.getAccount(user);
 		userObj.addFundstoAccount(accNum, money);
+		bd.storeAccount(userObj);
 	}
 
 }

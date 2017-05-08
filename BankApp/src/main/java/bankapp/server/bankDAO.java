@@ -60,5 +60,25 @@ public class bankDAO implements IbankDAO {
     		pm.close();
 	    }
 	}
+	
+	public void storeReport(Report rep){
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	   
+	    try {
+	       tx.begin();
+	       System.out.println("   * Storing report");
+	       pm.makePersistent(rep);
+	       tx.commit();
+	    } catch (Exception ex) {
+	    	System.out.println("   $ Error storing report: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+				
+    		pm.close();
+	    }
+	}
 
 }

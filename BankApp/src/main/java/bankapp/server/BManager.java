@@ -59,6 +59,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		}
 		user1Obj.deduceAccountFunds(accNum1, money);
 		bd.storeAccount(user1Obj);
+		bd.storeReport(new Report(user1, user2, money, accNum1, accNum2));
 	}
 
 	@Override
@@ -66,6 +67,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		User userObj = (User) bd.getAccount(user);
 		userObj.createAccount();
 		bd.storeAccount(userObj);
+		bd.storeReport(new Report(user));
 	}
 
 	@Override
@@ -73,10 +75,11 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		User userObj = (User) bd.getAccount(user);
 		userObj.addFundstoAccount(accNum, money);
 		bd.storeAccount(userObj);
+		bd.storeReport(new Report(user, accNum, money));
 	}
 
 	@Override
-	public void deleteAccount(String user, String accNum1, String accNum2) throws RemoteException {
+	public void deleteBankAccount(String user, String accNum1, String accNum2) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		transaction(user, user, userObj.getAccount(accNum1).getmoney(), accNum1, accNum2);
 		userObj.deleteAccount(accNum1);

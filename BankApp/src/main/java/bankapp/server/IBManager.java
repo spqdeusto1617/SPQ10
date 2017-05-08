@@ -9,5 +9,5 @@ public interface IBManager extends Remote {
 	public void transaction(String user1, String user2, int money, String accNum1, String accNum2) throws RemoteException;
 	public void createAccount(String user) throws RemoteException;
 	public void addFunds(String user, String accNum, int money) throws RemoteException;
-	public void deleteAccount(String user, String accNum1, String accNum2) throws RemoteException;
+	public void deleteBankAccount(String user, String accNum1, String accNum2) throws RemoteException;
 }

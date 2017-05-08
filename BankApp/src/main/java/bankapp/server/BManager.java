@@ -23,7 +23,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		bd.storeAccount(new Admin("adminuser", "adminpass"));
 		bd.storeAccount(new User("user", "pass", "user@mail.com"));
 	}
-
+		
 	public char login(String username, String pass) throws RemoteException {
 		try{
 			Account login = bd.getAccount(username);
@@ -44,6 +44,28 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 			System.out.println("Error retrieving user from DB. Check if the user exists");
 			return 'e';
 		}
+	}
+
+	@Override
+	public void transaction(String user1, String user2, int money, String accNum1, String accNum2) throws RemoteException {
+		User user1Obj = (User) bd.getAccount(user1);
+		User user2Obj = (User) bd.getAccount(user2);
+		user1Obj.deduceAccountFunds(accNum1, money);
+		user2Obj.addFundstoAccount(accNum2, money);
+		bd.storeAccount(user1Obj);
+		bd.storeAccount(user2Obj);
+	}
+
+	@Override
+	public void createAccount(String user) throws RemoteException {
+		User userObj = (User) bd.getAccount(user);
+		userObj.createAccount();
+	}
+
+	@Override
+	public void addFunds(String user, String accNum, int money) {
+		User userObj = (User) bd.getAccount(user);
+		userObj.addFundstoAccount(accNum, money);
 	}
 
 }

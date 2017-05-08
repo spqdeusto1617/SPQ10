@@ -6,7 +6,8 @@ import javax.jdo.annotations.*;
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
 public class User extends Account{
 	private String email;
-	@NotPersistent
+	@Persistent(defaultFetchGroup="true")
+	@Join
 	private HashMap<String, bankAccount> accounts;
 	public User(String username, String pass, String email){
 		super(username, pass);

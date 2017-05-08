@@ -14,8 +14,8 @@ public class bankClient {
 	    String pass;
 	    long timeBlock = 0;
 	    char loginchar;
-	    //do while loop asking for account login
 	    int counter = 0;
+	    //do while loop asking for account login
 		do{
 		counter++;
 		System.out.println("Please insert username login");
@@ -25,11 +25,13 @@ public class bankClient {
 		if(counter < 4){
 	    loginchar = bController.login(username, pass);
 		}
+		//if user reaches fourth number of tries, timeblock activates
 		else if(counter == 4){
 			timeBlock = System.currentTimeMillis();
 			System.out.println("Too many login tries. Try again in 20 seconds");
 			loginchar = 'e';
 		}
+		//if user keeps trying to log in after the try limit, he will be shown the waiting time
 		else{
 			if(System.currentTimeMillis() - timeBlock > 20000)
 				counter = 0;
@@ -39,8 +41,13 @@ public class bankClient {
 		}while(loginchar == 'e');
 		//if returns 'e', there was a login error and the loop restarts
 		//if returns 'a', account is admin
-		if(loginchar == 'a') System.out.println("user is admin");
+		if(loginchar == 'a'){
+			System.out.println("user is admin");
+			
+		}
 		//if returns 'u', account is user
-		else if(loginchar == 'u') System.out.println("user is standard user");
+		else if(loginchar == 'u'){
+			System.out.println("user is standard user");
+		}
 	}
 }

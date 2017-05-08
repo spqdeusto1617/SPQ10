@@ -33,4 +33,10 @@ public class User extends Account{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public void deleteAccount(String accNum){
+		this.accounts.remove(accNum);
+	}
+	public bankAccount getAccount(String accNum){
+		return this.accounts.get(accNum);
+	}
 }

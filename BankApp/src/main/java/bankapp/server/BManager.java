@@ -63,7 +63,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	}
 
 	@Override
-	public void createAccount(String user) throws RemoteException {
+	public void createBankAccount(String user) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		userObj.createAccount();
 		bd.storeAccount(userObj);
@@ -84,6 +84,16 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		transaction(user, user, userObj.getAccount(accNum1).getmoney(), accNum1, accNum2);
 		userObj.deleteAccount(accNum1);
 		bd.storeAccount(userObj);
+	}
+
+	@Override
+	public void deleteAccount(String user) throws RemoteException {
+		bd.deleteAccount(user);
+	}
+
+	@Override
+	public void createUser(String username, String pass, String email) throws RemoteException {
+		bd.storeAccount(new User(username, pass, email));
 	}
 
 }

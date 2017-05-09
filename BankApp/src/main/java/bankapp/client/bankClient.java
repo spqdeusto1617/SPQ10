@@ -43,11 +43,16 @@ public class bankClient {
 		//if returns 'a', account is admin
 		if(loginchar == 'a'){
 			System.out.println("user is admin");
+			bController.createUser("user", "pass", "user@mail.com");
+			bController.createUser("user1", "pass1", "user1@mail.com");
 			
 		}
 		//if returns 'u', account is user
 		else if(loginchar == 'u'){
 			System.out.println("user is standard user");
+			System.out.println("created bank account with number: " + bController.createBankAccount(username));
+			System.out.println("created bank account with number: " + bController.createBankAccount(username));
+			bController.addFunds(username, "2", 55);
 		}
 	}
 }

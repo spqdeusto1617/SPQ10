@@ -14,15 +14,16 @@ public class User extends Account{
 		this.email = email;
 		this.accounts = new HashMap<>();
 	}
-	public void deduceAccountFunds(String accNum, int money){
+	public void deduceAccountFunds(String accNum, long money){
 		this.accounts.get(accNum).deducemoney(money);
 	}
-	public void addFundstoAccount(String accNum, int money){
+	public void addFundstoAccount(String accNum, long money){
 		this.accounts.get(accNum).addmoney(money);
 	}
-	public void createAccount(){
+	public int createAccount(){
 		bankAccount acc = new bankAccount();
 		addAccount(acc);
+		return acc.getnumAcc();
 	}
 	public void addAccount(bankAccount acc){
 		this.accounts.put(Integer.toString(acc.getnumAcc()), acc);

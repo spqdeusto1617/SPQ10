@@ -1,3 +1,5 @@
+bankapp\server\Account.class
+bankapp\server\bankAccount.class
 bankapp\client\bankClient.class
 bankapp\client\bankController.class
 bankapp\server\BManager.class
@@ -7,3 +9,5 @@ bankapp\server\IbankDAO.class
 bankapp\server\IBManager.class
 bankapp\server\bankServer.class
 bankapp\server\User.class
+bankapp\server\Admin.class
+bankapp\server\Report.class

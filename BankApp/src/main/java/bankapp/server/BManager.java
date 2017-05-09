@@ -21,7 +21,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		this.port0 = Integer.parseInt(port0);
 		this.servName = servName;
 		bd.storeAccount(new Admin("adminuser", "adminpass"));
-		bd.storeAccount(new User("user", "pass", "user@mail.com"));
 	}
 		
 	public char login(String username, String pass) throws RemoteException {
@@ -47,7 +46,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	}
 
 	@Override
-	public void transaction(String user1, String user2, int money, String accNum1, String accNum2) throws RemoteException {
+	public void transaction(String user1, String user2, long money, String accNum1, String accNum2) throws RemoteException {
 		User user1Obj = (User) bd.getAccount(user1);
 		if(!user1.equals(user2)){
 		User user2Obj = (User) bd.getAccount(user2);
@@ -63,15 +62,15 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	}
 
 	@Override
-	public void createBankAccount(String user) throws RemoteException {
+	public int createBankAccount(String user) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
-		userObj.createAccount();
+		int banknum = userObj.createAccount();
 		bd.storeAccount(userObj);
 		bd.storeReport(new Report(user));
+		return banknum;
 	}
 
-	@Override
-	public void addFunds(String user, String accNum, int money) throws RemoteException {
+	public void addFunds(String user, String accNum, long money) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		userObj.addFundstoAccount(accNum, money);
 		bd.storeAccount(userObj);
@@ -93,6 +92,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 
 	@Override
 	public void createUser(String username, String pass, String email) throws RemoteException {
+		System.out.println(username + pass + email);
 		bd.storeAccount(new User(username, pass, email));
 	}
 

@@ -1,12 +1,13 @@
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\client\bankController.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\bankAccount.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\Account.java
-C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\User.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\IbankDAO.java
-C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\BManager.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\client\RMIServiceLocator.java
-C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\client\bankClient.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\Admin.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\bankDAO.java
-C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\bankServer.java
 C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\IBManager.java
+C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\User.java
+C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\BManager.java
+C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\client\bankClient.java
+C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\Report.java
+C:\Users\Pablosensi\git\SPQ10\BankApp\src\main\java\bankapp\server\bankServer.java

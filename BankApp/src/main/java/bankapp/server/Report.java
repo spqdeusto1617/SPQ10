@@ -3,19 +3,19 @@ package bankapp.server;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
-@PersistenceCapable(detachable = "true")
+@PersistenceCapable
 public class Report {
 	private String user1;
 	private String user2;
 	private String accNum1;
 	private String accNum2;
 	private String reportType;
-	private int money;
+	private long money;
 	@PrimaryKey
 	private int id;
 	private static int reports = 0;
 	
-	public Report(String user1, String user2, int money, String accNum1, String accNum2){
+	public Report(String user1, String user2, long money, String accNum1, String accNum2){
 		this.user1 = user1;
 		this.user2 = user2;
 		this.accNum1 = accNum1;
@@ -33,7 +33,7 @@ public class Report {
 		this.reportType = "Account creation";
 	}
 	
-	public Report(String user1, String accNum1, int money){
+	public Report(String user1, String accNum1, long money){
 		this.user1 = user1;
 		this.accNum1 = accNum1;
 		this.money = money;
@@ -60,7 +60,7 @@ public class Report {
 	public int getId() {
 		return id;
 	}
-	public int getMoney(){
+	public long getMoney(){
 		return money;
 	}
 }

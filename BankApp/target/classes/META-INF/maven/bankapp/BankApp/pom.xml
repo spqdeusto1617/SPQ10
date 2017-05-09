@@ -17,6 +17,16 @@
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
 	</properties>
 	
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+		</plugins>
+	</reporting>
+	
   <dependencies>
   	  <dependency>
 		  <groupId>org.hibernate</groupId>
@@ -35,6 +45,11 @@
 		  <groupId>junit</groupId>
 		  <artifactId>junit</artifactId>
 		  <version>4.12</version>
+	  </dependency>
+	  <dependency>
+	  	  <groupId>org.databene</groupId>
+	  	   <artifactId>contiperf</artifactId>
+		  <version>2.1.0</version>
 	  </dependency>
      <dependency>
             <groupId>org.datanucleus</groupId>

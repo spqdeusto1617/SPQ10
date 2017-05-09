@@ -1905,3 +1905,15 @@ org.datanucleus.store.rdbms.exceptions.MissingTableException: La tabla no existe
 09-05-17_02:06:48 (RMI TCP Connection(4)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:1") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 09-05-17_02:06:48 (RMI TCP Connection(4)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 09-05-17_02:06:48 (RMI TCP Connection(4)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Account.class" con definicion enhanced
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Admin.class" con definicion enhanced
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\bankAccount.class" con definicion enhanced
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Report.class" con definicion enhanced
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=450 ms, enhance=93 ms, total=543 ms. Compruebe el LOG para los detalles

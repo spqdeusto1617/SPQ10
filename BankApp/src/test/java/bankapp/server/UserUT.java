@@ -25,10 +25,13 @@ public class UserUT {
     @Test
     public void validUser() {
         User user = new User("username", "password", "email@example.com");
+        int accountnum = user.createAccount();
+        String accNum = Integer.toString(accountnum);
         assertTrue(user != null);
         assertThat(user.getEmail(), is("email@example.com"));
         assertThat(user.getPass(), is("password"));
         assertThat(user.getUsername(), is("username"));
+        assertThat(user.getAccount(accNum).getnumAcc(), is(accountnum));
     }
 
     /* TODO - review validation fields annotations */

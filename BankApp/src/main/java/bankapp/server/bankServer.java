@@ -18,10 +18,10 @@ public class bankServer {
 		try {
 			IBManager EBServer = new BManager(args[0], args[1], args[2]);
 			Naming.rebind(name, EBServer);
-			System.out.println("- EasyBookingServer '" + name + "' active and waiting...");
+			System.out.println("- BankServer '" + name + "' active and waiting...");
             System.in.read();	
 		} catch (Exception e) {
-			System.err.println("$ EasyBookingServer exception: " + e.getMessage());
+			System.err.println("$ BankServer exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

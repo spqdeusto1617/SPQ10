@@ -1917,3 +1917,135 @@ org.datanucleus.store.rdbms.exceptions.MissingTableException: La tabla no existe
 09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
 09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
 09-05-17_03:21:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=450 ms, enhance=93 ms, total=543 ms. Compruebe el LOG para los detalles
+09-05-17_03:23:32 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:23:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=123 ms, enhance=28 ms, total=151 ms. Compruebe el LOG para los detalles
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:23:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=28 ms, total=152 ms. Compruebe el LOG para los detalles
+09-05-17_03:24:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:24:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=28 ms, total=153 ms. Compruebe el LOG para los detalles
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:29:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=29 ms, total=153 ms. Compruebe el LOG para los detalles
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:30:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=28 ms, total=152 ms. Compruebe el LOG para los detalles
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Account.class" con definicion enhanced
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Admin.class" con definicion enhanced
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\bankAccount.class" con definicion enhanced
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Report.class" con definicion enhanced
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:31:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=121 ms, enhance=85 ms, total=206 ms. Compruebe el LOG para los detalles
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:31:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=28 ms, total=152 ms. Compruebe el LOG para los detalles
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Account.class" con definicion enhanced
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Admin.class" con definicion enhanced
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\bankAccount.class" con definicion enhanced
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Report.class" con definicion enhanced
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:32:19 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=122 ms, enhance=83 ms, total=205 ms. Compruebe el LOG para los detalles
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:32:26 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=27 ms, total=151 ms. Compruebe el LOG para los detalles
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Account.class" con definicion enhanced
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Admin.class" con definicion enhanced
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\bankAccount.class" con definicion enhanced
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Report.class" con definicion enhanced
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:33:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=120 ms, enhance=84 ms, total=204 ms. Compruebe el LOG para los detalles
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_03:33:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=28 ms, total=152 ms. Compruebe el LOG para los detalles

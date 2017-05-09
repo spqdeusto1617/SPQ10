@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ReportUT {
+public class ReportTest {
 
 	@Test
 	public void validReport(){
@@ -15,7 +15,7 @@ public class ReportUT {
         assertThat(report.getAccNum2(), is("2"));
         assertThat(report.getUser1(), is("user1"));
         assertThat(report.getUser2(), is("user2"));
-        assertThat(report.getMoney(), is(4124));
+        assertThat(report.getMoney(), is(4124L));
       
 	}
 }

@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
 import javax.validation.*;
 import java.util.Set;
 
-public class UserUT {
+public class UserTest {
 
     protected static Validator validator;
 

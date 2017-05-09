@@ -1,30 +1,32 @@
 package bankapp.server;
 
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.PrimaryKey;
-
+import java.util.HashMap;
+import javax.jdo.annotations.*;
 @PersistenceCapable(detachable = "true")
-public class User {
-	@PrimaryKey
-	private String username;
-	private String pass;
+@Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
+public class User extends Account{
 	private String email;
+	@Persistent(defaultFetchGroup="true")
+	@Join
+	private HashMap<String, bankAccount> accounts;
 	public User(String username, String pass, String email){
-		this.username = username;
-		this.pass = pass;
+		super(username, pass);
 		this.email = email;
+		this.accounts = new HashMap<>();
 	}
-	public String getUsername() {
-		return username;
+	public void deduceAccountFunds(String accNum, long money){
+		this.accounts.get(accNum).deducemoney(money);
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void addFundstoAccount(String accNum, long money){
+		this.accounts.get(accNum).addmoney(money);
 	}
-	public String getPass() {
-		return pass;
+	public int createAccount(){
+		bankAccount acc = new bankAccount();
+		addAccount(acc);
+		return acc.getnumAcc();
 	}
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void addAccount(bankAccount acc){
+		this.accounts.put(Integer.toString(acc.getnumAcc()), acc);
 	}
 	public String getEmail() {
 		return email;
@@ -32,7 +34,10 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String toString(){
-		return username;
+	public void deleteAccount(String accNum){
+		this.accounts.remove(accNum);
+	}
+	public bankAccount getAccount(String accNum){
+		return this.accounts.get(accNum);
 	}
 }

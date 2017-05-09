@@ -2,7 +2,7 @@ package bankapp.client;
 
 import java.util.Scanner;
 
-public class BankClient {
+public class bankClient {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class BankClient {
 	    String username = keyboard.nextLine();
 	    System.out.println("Please insert user pass");
 	    String pass = keyboard.nextLine();
-	    BankController bController = new BankController(args[0], args[1], args[2]);
+	    bankController bController = new bankController(args[0], args[1], args[2]);
 	    bController.login(username, pass);
 	}
 

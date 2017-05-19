@@ -1,0 +1,153 @@
+\hypertarget{classbankapp_1_1server_1_1_b_manager}{}\section{bankapp.\+server.\+B\+Manager Class Reference}
+\label{classbankapp_1_1server_1_1_b_manager}\index{bankapp.\+server.\+B\+Manager@{bankapp.\+server.\+B\+Manager}}
+Inheritance diagram for bankapp.\+server.\+B\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbankapp_1_1server_1_1_b_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbankapp_1_1server_1_1_b_manager_aa7f45d3eddae4e91afaf2b19275b0c7e}{B\+Manager} (String server\+Address, String port0, String serv\+Name)  throws Remote\+Exception 
+\item 
+char \hyperlink{classbankapp_1_1server_1_1_b_manager_a3840891c318887cef8ed2f7c193cfba9}{login} (String username, String pass)  throws Remote\+Exception 
+\item 
+void \hyperlink{classbankapp_1_1server_1_1_b_manager_a5ce24fa69bd4bd08ef793072495b84b4}{transaction} (String user1, String user2, long money, String acc\+Num1, String acc\+Num2)  throws Remote\+Exception 
+\item 
+int \hyperlink{classbankapp_1_1server_1_1_b_manager_abf7716d220d573ad491f4ee15312aaff}{create\+Bank\+Account} (String user)  throws Remote\+Exception 
+\item 
+void \hyperlink{classbankapp_1_1server_1_1_b_manager_a0c81d9fb02961e95efa371249f284b47}{add\+Funds} (String user, String acc\+Num, long money)  throws Remote\+Exception 
+\item 
+void \hyperlink{classbankapp_1_1server_1_1_b_manager_a56404dc8a349618d517f73ad4f8e0026}{delete\+Bank\+Account} (String user, String acc\+Num1, String acc\+Num2)  throws Remote\+Exception 
+\item 
+void \hyperlink{classbankapp_1_1server_1_1_b_manager_ad8c5c164841d3ad7e25070c6b065bb4d}{delete\+Account} (String user)  throws Remote\+Exception 
+\item 
+void \hyperlink{classbankapp_1_1server_1_1_b_manager_ad98f4af0b4ae0842a58570e6c08a371c}{create\+User} (String username, String pass, String email)  throws Remote\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file B\+Manager.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_aa7f45d3eddae4e91afaf2b19275b0c7e}\label{classbankapp_1_1server_1_1_b_manager_aa7f45d3eddae4e91afaf2b19275b0c7e}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!B\+Manager@{B\+Manager}}
+\index{B\+Manager@{B\+Manager}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{B\+Manager()}{BManager()}}
+{\footnotesize\ttfamily bankapp.\+server.\+B\+Manager.\+B\+Manager (\begin{DoxyParamCaption}\item[{String}]{server\+Address,  }\item[{String}]{port0,  }\item[{String}]{serv\+Name }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Definition at line 22 of file B\+Manager.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_a0c81d9fb02961e95efa371249f284b47}\label{classbankapp_1_1server_1_1_b_manager_a0c81d9fb02961e95efa371249f284b47}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!add\+Funds@{add\+Funds}}
+\index{add\+Funds@{add\+Funds}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{add\+Funds()}{addFunds()}}
+{\footnotesize\ttfamily void bankapp.\+server.\+B\+Manager.\+add\+Funds (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{acc\+Num,  }\item[{long}]{money }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_a31f275bed15b74bb2bc6ef43ede7f7f8}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 79 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_abf7716d220d573ad491f4ee15312aaff}\label{classbankapp_1_1server_1_1_b_manager_abf7716d220d573ad491f4ee15312aaff}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!create\+Bank\+Account@{create\+Bank\+Account}}
+\index{create\+Bank\+Account@{create\+Bank\+Account}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{create\+Bank\+Account()}{createBankAccount()}}
+{\footnotesize\ttfamily int bankapp.\+server.\+B\+Manager.\+create\+Bank\+Account (\begin{DoxyParamCaption}\item[{String}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_aeb423a1ba2348fdaa7d1466a907e82e1}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 70 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_ad98f4af0b4ae0842a58570e6c08a371c}\label{classbankapp_1_1server_1_1_b_manager_ad98f4af0b4ae0842a58570e6c08a371c}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!create\+User@{create\+User}}
+\index{create\+User@{create\+User}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{create\+User()}{createUser()}}
+{\footnotesize\ttfamily void bankapp.\+server.\+B\+Manager.\+create\+User (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{pass,  }\item[{String}]{email }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_a09b3ca29b50f7c662e360a47cea220ae}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 103 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_ad8c5c164841d3ad7e25070c6b065bb4d}\label{classbankapp_1_1server_1_1_b_manager_ad8c5c164841d3ad7e25070c6b065bb4d}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!delete\+Account@{delete\+Account}}
+\index{delete\+Account@{delete\+Account}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{delete\+Account()}{deleteAccount()}}
+{\footnotesize\ttfamily void bankapp.\+server.\+B\+Manager.\+delete\+Account (\begin{DoxyParamCaption}\item[{String}]{user }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_aa1f1aee23930d78375c12496e9f47cdf}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 97 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_a56404dc8a349618d517f73ad4f8e0026}\label{classbankapp_1_1server_1_1_b_manager_a56404dc8a349618d517f73ad4f8e0026}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!delete\+Bank\+Account@{delete\+Bank\+Account}}
+\index{delete\+Bank\+Account@{delete\+Bank\+Account}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{delete\+Bank\+Account()}{deleteBankAccount()}}
+{\footnotesize\ttfamily void bankapp.\+server.\+B\+Manager.\+delete\+Bank\+Account (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{acc\+Num1,  }\item[{String}]{acc\+Num2 }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_a7b1a8e3d663126a894a7c074f35e49d3}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 88 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_a3840891c318887cef8ed2f7c193cfba9}\label{classbankapp_1_1server_1_1_b_manager_a3840891c318887cef8ed2f7c193cfba9}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!login@{login}}
+\index{login@{login}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily char bankapp.\+server.\+B\+Manager.\+login (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{pass }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_a96bce16e21db1585eb42a5ef55b43050}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 30 of file B\+Manager.\+java.
+
+\mbox{\Hypertarget{classbankapp_1_1server_1_1_b_manager_a5ce24fa69bd4bd08ef793072495b84b4}\label{classbankapp_1_1server_1_1_b_manager_a5ce24fa69bd4bd08ef793072495b84b4}} 
+\index{bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}!transaction@{transaction}}
+\index{transaction@{transaction}!bankapp\+::server\+::\+B\+Manager@{bankapp\+::server\+::\+B\+Manager}}
+\subsubsection{\texorpdfstring{transaction()}{transaction()}}
+{\footnotesize\ttfamily void bankapp.\+server.\+B\+Manager.\+transaction (\begin{DoxyParamCaption}\item[{String}]{user1,  }\item[{String}]{user2,  }\item[{long}]{money,  }\item[{String}]{acc\+Num1,  }\item[{String}]{acc\+Num2 }\end{DoxyParamCaption}) throws Remote\+Exception}
+
+
+
+Implements \hyperlink{interfacebankapp_1_1server_1_1_i_b_manager_a6ed6af471750f7c721d45ead983bef5d}{bankapp.\+server.\+I\+B\+Manager}.
+
+
+
+Definition at line 53 of file B\+Manager.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/bankapp/server/\hyperlink{_b_manager_8java}{B\+Manager.\+java}\end{DoxyCompactItemize}

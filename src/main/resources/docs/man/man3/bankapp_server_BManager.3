@@ -1,0 +1,93 @@
+.TH "bankapp.server.BManager" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bankapp.server.BManager \- This is the bank manger Class extends UnicastRemoteObject and implements \fBIBManager\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits UnicastRemoteObject, and \fBbankapp\&.server\&.IBManager\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBManager\fP (String serverAddress, String port0, String servName)  throws RemoteException "
+.br
+.RI "\fBBManager\fP Constructor and also store an new user\&. "
+.ti -1c
+.RI "boolean \fBlogin\fP (String username, String pass)  throws RemoteException "
+.br
+.RI "Function Login as a bank manager allow or deny access\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the bank manger Class extends UnicastRemoteObject and implements \fBIBManager\fP\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+BICHRI 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+05-17-2017 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "bankapp\&.server\&.BManager\&.BManager (String serverAddress, String port0, String servName) throws RemoteException"
+
+.PP
+\fBBManager\fP Constructor and also store an new user\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIserverAddress\fP 
+.br
+\fIport0\fP 
+.br
+\fIservName\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIRemoteException\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean bankapp\&.server\&.BManager\&.login (String username, String pass) throws RemoteException"
+
+.PP
+Function Login as a bank manager allow or deny access\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIusername\fP 
+.br
+\fIpass\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+false 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIRemoteException\fP 
+.RE
+.PP
+
+.PP
+Implements \fBbankapp\&.server\&.IBManager\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BankApp from the source code\&.

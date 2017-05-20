@@ -790,7 +790,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = BankApp/src/main/java/bankapp/client  BankApp\src\main\java\bankapp\server   BankApp\src\test\java\es\deusto\spq
+INPUT                  = src\main\java\bankapp\client  src\test\java\bankapp\server   src\test\java\bankapp\server
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

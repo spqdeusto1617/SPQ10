@@ -2,8 +2,16 @@ package bankapp.server;
 
 import java.rmi.Naming;
 
-
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the bank server Class
+ */
 public class bankServer {
+	/**
+	 * @brief main function that will do the server hundling
+	 * @param args
+	 */
 	public static void main(String args[]) {
 		if (args.length != 3) {
 			System.exit(0);

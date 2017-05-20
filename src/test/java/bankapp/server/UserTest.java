@@ -8,7 +8,11 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import javax.validation.*;
-
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the UserTest class 
+ */
 public class UserTest {
 
     protected static Validator validator;
@@ -20,6 +24,9 @@ public class UserTest {
 //    }
 
     @Test
+    /**
+     * @brief create valid user 
+     */
     public void validUser() {
         User user = new User("username", "password", "email@example.com");
         int accountnum = user.createAccount();
@@ -32,6 +39,9 @@ public class UserTest {
     }
 
     @Test
+    /**
+     * @brief test the add funds 
+     */
     public void testAddFunds(){
     	User user = new User("username", "password", "email@example.com");
         int accountnum = user.createAccount();
@@ -40,6 +50,9 @@ public class UserTest {
     }
     
     @Test
+    /**
+     * @brief test a transaction
+     */
     public void testTransaction(){
     	User user1 = new User("username", "password", "email@example.com");
     	User user2 = new User("username2", "password2", "email2@example.com");

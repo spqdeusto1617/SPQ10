@@ -1,29 +1,48 @@
 package bankapp.server;
 
-import javax.jdo.annotations.*;
-//JDO Persistence, use one table for storing both Account (superclass)
-//User, and Admin (inherited classes)
-@PersistenceCapable(detachable = "true")
-@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
-@Discriminator(strategy=DiscriminatorStrategy.CLASS_NAME)
 public class Account {
-	@PrimaryKey
-	private String username;
-	private String pass;
-	public Account(String username, String pass){
-		this.username = username;
-		this.pass = pass;
+	
+	private int numAcc;
+	/*
+	private String libellecp;
+	private String senscp;
+	*/
+	private int money;
+	private int numcli;
+	public Account(){
+		
 	}
-	public String getUsername() {
-		return this.username;
+	public int getnumAcc() {
+		return numAcc;
 	}
-	public String getPass() {
-		return this.pass;
+	public void setnumAcc(int numAcc) {
+		this.numAcc = numAcc;
 	}
-	public void setPass(String pass) {
-		this.pass = pass;
+	/*	
+	public String getLibellecp() {
+		return libellecp;
 	}
-	public String toString(){
-		return username;
+	public void setLibellecp(String libellecp) {
+		this.libellecp = libellecp;
 	}
+	public String getSenscp() {
+		return senscp;
+	}
+	public void setSenscp(String senscp) {
+		this.senscp = senscp;
+	}
+	*/
+	public int getmoney() {
+		return money;
+	}
+	public void setmoney(int money) {
+		this.money = money;
+	}
+	public int getNumcli() {
+		return numcli;
+	}
+	public void setNumcli(int numcli) {
+		this.numcli = numcli;
+	}
+
 }

@@ -1,19 +1,20 @@
 package bankapp.server;
 
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.PrimaryKey;
+import java.util.HashMap;
+import javax.jdo.annotations.*;
 
 @PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
 /**
  *@author BICHRI
  *@date 05-17-2017
  *@brief This is the User 
  */
 public class User {
-	@PrimaryKey
-	private String username;
-	private String pass;
 	private String email;
+	@Persistent(defaultFetchGroup="true")
+	@Join
+	private HashMap<String, bankAccount> accounts;
 	/**
 	 * @brief constractor
 	 * @param username
@@ -21,9 +22,9 @@ public class User {
 	 * @param email
 	 */
 	public User(String username, String pass, String email){
-		this.username = username;
-		this.pass = pass;
+		super(username, pass);
 		this.email = email;
+		this.accounts = new HashMap<>();
 	}
 	/**
 	 * @brief get the user name

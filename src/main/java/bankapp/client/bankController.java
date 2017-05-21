@@ -25,20 +25,64 @@ public class bankController {
 	 * @brief Login Function Allow or Deny access to the application
 	 * @param user
 	 * @param pass
-	 * @return true
+	 * @return char
 	 */
-	public boolean login(String user, String pass){
+	public char login(String user, String pass){
+		//calls the service locator login method from the controller
 		System.out.println("Controller calling -> RMIServiceLocator");
-		if(rsl.login(user, pass)){
-			//new Booking_Search(this);
-			System.out.println("Login Succesfull");
-			return true;
-		}
-		else{
-			System.out.println("Login Unsuccessfull");
-			return false;
-		}
-	
-
+		return rsl.login(user, pass);
+	}
+	/**
+	 * @brief Create user method
+	 * @param user
+	 * @param pass
+	 * @param email
+	 */
+	public void createUser(String user, String pass, String email){
+		rsl.createUser(user, pass, email);
+	}
+	/**
+	 * @brief Make transaction method
+	 * @param user1
+	 * @param user2
+	 * @param money
+	 * @param accNum1
+	 * @param accNum2
+	 */
+	public void transaction(String user1, String user2, long money, String accNum1, String accNum2){
+		rsl.transaction(user1, user2, money, accNum1, accNum2);
+	}
+	/**
+	 * @brief Create bank account method
+	 * @param user
+	 * @return int
+	 */
+	public int createBankAccount(String user){
+		return rsl.createBankAccount(user);
+	}
+	/**
+	 * @brief Adds funds to any bank account
+	 * @param user
+	 * @param accNum
+	 * @param money
+	 */
+	public void addFunds(String user, String accNum, long money){
+		rsl.addFunds(user, accNum, money);
+	}
+	/**
+	 * @brief Deletes bank account
+	 * @param user
+	 * @param accNum
+	 * @param accNum2
+	 */
+	public void deleteBankAccount(String user, String accNum1, String accNum2){
+		rsl.deleteBankAccount(user, accNum1, accNum2);
+	}
+	/**
+	 * @brief Deletes account
+	 * @param user
+	 */
+	public void deleteAccount(String user){
+		rsl.deleteAccount(user);
 	}
 }

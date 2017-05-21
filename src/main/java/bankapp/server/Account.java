@@ -1,48 +1,35 @@
 package bankapp.server;
 
-public class Account {
-	
-	private int numAcc;
-	/*
-	private String libellecp;
-	private String senscp;
-	*/
-	private int money;
-	private int numcli;
-	public Account(){
-		
-	}
-	public int getnumAcc() {
-		return numAcc;
-	}
-	public void setnumAcc(int numAcc) {
-		this.numAcc = numAcc;
-	}
-	/*	
-	public String getLibellecp() {
-		return libellecp;
-	}
-	public void setLibellecp(String libellecp) {
-		this.libellecp = libellecp;
-	}
-	public String getSenscp() {
-		return senscp;
-	}
-	public void setSenscp(String senscp) {
-		this.senscp = senscp;
-	}
-	*/
-	public int getmoney() {
-		return money;
-	}
-	public void setmoney(int money) {
-		this.money = money;
-	}
-	public int getNumcli() {
-		return numcli;
-	}
-	public void setNumcli(int numcli) {
-		this.numcli = numcli;
-	}
+import javax.jdo.annotations.*;
+//JDO Persistence, use one table for storing both Account (superclass)
+//User, and Admin (inherited classes)
+@PersistenceCapable(detachable = "true")
+@Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
+@Discriminator(strategy=DiscriminatorStrategy.CLASS_NAME)
 
+public class Account {
+	@PrimaryKey
+	private String username;
+	private String pass;
+	/**
+	 * @brief Constructor
+	 * @param username
+	 * @param pass
+	 */
+	public Account(String username, String pass){
+		this.username = username;
+		this.pass = pass;
+	}
+	public String getUsername() {
+		return this.username;
+	}
+	public String getPass() {
+		return this.pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	public String toString(){
+		return username;
+	}
 }

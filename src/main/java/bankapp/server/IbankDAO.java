@@ -8,19 +8,9 @@ public interface IbankDAO {
 	/**
 	 * @brief function name and params
 	 * @param username
-	 * @return user
+	 * @return Account
 	 */
-	public User getUser(String username);
-	/**
-	 * @brief function name and params
-	 * @param user
-	 */
-	public void storeUser(User user);
-	/**
-	 * @brief function name and params
-	 * @param user
-	 */
-	public void updateUser(User user);
+	public Account getAccount(String username); 
 	/**
 	 * @brief function name and params
 	 * @param acc
@@ -28,7 +18,12 @@ public interface IbankDAO {
 	public void storeAccount(Account acc);
 	/**
 	 * @brief function name and params
+	 * @param rep
+	 */
+	public void storeReport(Report rep);
+	/**
+	 * @brief function name and params
 	 * @param acc
 	 */
-	public void updateAccount(Account acc);
+	public void deleteAccount(String username);
 }

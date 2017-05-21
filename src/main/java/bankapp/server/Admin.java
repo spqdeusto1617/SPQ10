@@ -15,6 +15,6 @@ public class Admin extends Account{
 	 * @param pass
 	 */
 	public Admin(String username, String pass){
-		super(username, pass);
+		super();
 	}
 }

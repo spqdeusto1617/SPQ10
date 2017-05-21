@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: bankapp.server.BDTest
+Test set: bankapp.server.ServerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.121 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.955 sec

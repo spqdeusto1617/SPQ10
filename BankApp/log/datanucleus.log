@@ -2307,3 +2307,318 @@ Caused by: java.net.ConnectException: Connection refused: connect
 09-05-17_09:14:47 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=120 ms, enhance=28 ms, total=148 ms. Compruebe el LOG para los detalles
 09-05-17_09:14:47 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
 09-05-17_09:34:28 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_10:08:10 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_10:08:12 (main) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "bankapp.server.User@587e5365" con SQL "INSERT INTO `ACCOUNT` (`PASS`,`EMAIL`,`USERNAME`,`DISCRIMINATOR`) VALUES (?,?,?,?)" ha tirado un error : Duplicate entry 'perfuser' for key 'PRIMARY'
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_10:29:11 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=129 ms, enhance=28 ms, total=157 ms. Compruebe el LOG para los detalles
+09-05-17_10:29:13 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_10:32:47 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=29 ms, total=154 ms. Compruebe el LOG para los detalles
+09-05-17_10:32:48 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_10:33:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_10:33:34 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=140 ms, enhance=16 ms, total=156 ms. Compruebe el LOG para los detalles
+09-05-17_10:33:36 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Account.class" con definicion enhanced
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Admin.class" con definicion enhanced
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\bankAccount.class" con definicion enhanced
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\Report.class" con definicion enhanced
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Pablosensi\git\SPQ10\BankApp\target\classes\bankapp\server\User.class" con definicion enhanced
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:19:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=102 ms, total=226 ms. Compruebe el LOG para los detalles
+09-05-17_11:19:09 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:19:11 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:19:13 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:20:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=128 ms, enhance=24 ms, total=152 ms. Compruebe el LOG para los detalles
+09-05-17_11:20:06 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:20:07 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:20:09 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:34:13 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=140 ms, enhance=26 ms, total=166 ms. Compruebe el LOG para los detalles
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:34:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=25 ms, total=150 ms. Compruebe el LOG para los detalles
+09-05-17_11:34:22 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:28 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:30 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:31 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:32 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:34:33 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:34:33 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:34:33 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:4") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=130 ms, enhance=24 ms, total=154 ms. Compruebe el LOG para los detalles
+09-05-17_11:37:42 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:37:47 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:37:49 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:37:50 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:37:50 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:37:52 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:37:52 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:37:52 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:4") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:39:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=128 ms, enhance=25 ms, total=153 ms. Compruebe el LOG para los detalles
+09-05-17_11:39:05 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:39:10 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:39:11 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:39:12 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:39:13 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:39:14 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:39:14 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:39:14 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:4") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_11:43:17 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=127 ms, enhance=26 ms, total=153 ms. Compruebe el LOG para los detalles
+09-05-17_11:43:18 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:45:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=122 ms, enhance=24 ms, total=146 ms. Compruebe el LOG para los detalles
+09-05-17_11:45:02 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:50:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=135 ms, enhance=25 ms, total=160 ms. Compruebe el LOG para los detalles
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:50:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=25 ms, total=150 ms. Compruebe el LOG para los detalles
+09-05-17_11:50:09 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:51:20 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=126 ms, enhance=25 ms, total=151 ms. Compruebe el LOG para los detalles
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_11:51:27 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=126 ms, enhance=25 ms, total=151 ms. Compruebe el LOG para los detalles
+09-05-17_11:51:28 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:01:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=124 ms, enhance=25 ms, total=149 ms. Compruebe el LOG para los detalles
+09-05-17_12:01:59 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:02:05 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:02:07 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:02:07 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:02:08 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:02:09 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:02:09 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:02:09 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:4") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:05:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=130 ms, enhance=25 ms, total=155 ms. Compruebe el LOG para los detalles
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:06:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=24 ms, total=149 ms. Compruebe el LOG para los detalles
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:06:13 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=127 ms, enhance=25 ms, total=152 ms. Compruebe el LOG para los detalles
+09-05-17_12:06:14 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:06:16 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:06:18 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:06:18 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:06:24 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:06:25 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:06:25 (main) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:4") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:09:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=125 ms, enhance=24 ms, total=149 ms. Compruebe el LOG para los detalles
+09-05-17_12:09:29 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:09:31 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:09:32 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:09:33 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:09:33 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.0.m2) para el API "JDO" utilisando el JRE "{2}"
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Account" esta enhanced.
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Account
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Admin" esta enhanced.
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Admin
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.bankAccount" esta enhanced.
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.bankAccount
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.Report" esta enhanced.
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.Report
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - La clase "bankapp.server.User" esta enhanced.
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bankapp.server.User
+09-05-17_12:21:41 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 5 clases. Tiempos : input=236 ms, enhance=25 ms, total=261 ms. Compruebe el LOG para los detalles
+09-05-17_12:22:34 (bankapp.server.bankServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+09-05-17_12:23:45 (RMI TCP Connection(5)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:1") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:23:45 (RMI TCP Connection(5)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:2") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+09-05-17_12:23:45 (RMI TCP Connection(5)-192.168.96.1) WARN  [DataNucleus.Persistence] - El objeto "bankapp.server.Report" (id="bankapp.server.Report:3") va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient

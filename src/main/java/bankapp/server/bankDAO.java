@@ -24,7 +24,6 @@ public class bankDAO implements IbankDAO {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 }
 
-	@Override
 	public Account getAccount(String username) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		/* By default only 1 level is retrieved from the db
@@ -90,7 +89,6 @@ public class bankDAO implements IbankDAO {
 	    }
 	}
 
-	@Override
 	public void deleteAccount(String username) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();

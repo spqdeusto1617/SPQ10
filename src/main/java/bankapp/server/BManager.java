@@ -68,7 +68,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 			return 'e';
 		}
 	}
-	@Override
 	public void transaction(String user1, String user2, long money, String accNum1, String accNum2) throws RemoteException {
 		LOGGER.log(Level.FINE, "performing transaction: " + user1 + "---->" + user2 );
 		User user1Obj = (User) bd.getAccount(user1);
@@ -85,7 +84,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		bd.storeReport(new Report(user1, user2, money, accNum1, accNum2));
 	}
 
-	@Override
 	public int createBankAccount(String user) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		int banknum = userObj.createAccount();
@@ -103,7 +101,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		LOGGER.log(Level.FINE, "Added " + money + " for user: " + user);
 	}
 
-	@Override
 	public void deleteBankAccount(String user, String accNum1, String accNum2) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		transaction(user, user, userObj.getAccount(accNum1).getmoney(), accNum1, accNum2);
@@ -112,13 +109,12 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		LOGGER.log(Level.FINE, "Bank account number " + accNum1 + " deleted for user: " + user);
 	}
 
-	@Override
+
 	public void deleteAccount(String user) throws RemoteException {
 		bd.deleteAccount(user);
 		LOGGER.log(Level.FINE, "User " + user + " deleted");
 	}
 
-	@Override
 	public void createUser(String username, String pass, String email) throws RemoteException {
 		System.out.println(username + pass + email);
 		bd.storeAccount(new User(username, pass, email));

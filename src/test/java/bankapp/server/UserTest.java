@@ -3,12 +3,6 @@ package bankapp.server;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-
-import org.junit.Before;
 import org.junit.Test;
 /**
  *@author BICHRI
@@ -16,14 +10,6 @@ import org.junit.Test;
  *@brief This is the UserTest class 
  */
 public class UserTest {
-
-    protected static Validator validator;
-
-    @Before
-    public void setup() {
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        validator = factory.getValidator();
-    }
 
     @Test
     /**

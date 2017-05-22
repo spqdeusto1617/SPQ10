@@ -1,6 +1,6 @@
 package bankapp.server;
 
-import java.util.logging.Level;
+import java.util.ArrayList;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
@@ -12,7 +12,7 @@ import javax.jdo.Transaction;
  *@date 05-17-2017
  *@brief This is the bank DAO Class
  */
-public class BankDAO implements IbankDAO {
+public class BankDAO implements IBankDAO {
 	/**
 	 * @brief Private variable type PersistenceManagerFactory 
 	 */
@@ -114,5 +114,28 @@ public class BankDAO implements IbankDAO {
     		pm.close();
 		
 	}
-
+	public ArrayList<Report> getReports(String accNum){
+		// TODO Auto-generated method stub
+				PersistenceManager pm = pmf.getPersistenceManager();
+				/* By default only 1 level is retrieved from the db
+				 * so if we wish to fetch more than one level, we must indicate it
+				 */
+				pm.getFetchPlan().setMaxFetchDepth(10);
+				
+				Transaction tx = pm.currentTransaction();
+				Account account = null;
+					System.out.println("   * Retrieving an Extent for Report.");
+					
+					tx.begin();
+					System.out.println("Retrieving reports for " + accNum );
+					Query<?> query = pm.newQuery("SELECT FROM " + Report.class.getName() + " WHERE accNum1 == '" + accNum + "'");
+			    	account = (Account)query.execute();
+					tx.commit();			
+			    	if (tx != null && tx.isActive()) {
+			    		tx.rollback();
+			    	}
+			    	pm.deletePersistent(account);
+		    		pm.close();
+		    		return null;
+	}
 }

@@ -2,6 +2,7 @@ package bankapp.server;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -124,6 +125,10 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	public User getUser(String user){
 		System.out.println(user);
 		return (User) bd.getAccount(user);
+	}
+	
+	public ArrayList<Report> getReports(String accNum){
+		return bd.getReports(accNum);
 	}
 
 }

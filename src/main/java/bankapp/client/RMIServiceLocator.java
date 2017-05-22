@@ -3,7 +3,10 @@ package bankapp.client;
 import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+
 import bankapp.server.IBManager;
+import bankapp.server.Report;
 import bankapp.server.User;
 /**
  *@author BICHRI
@@ -135,6 +138,16 @@ public class RMIServiceLocator {
 	public User getUser(String user){
 		try{
 			return bm.getUser(user);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public ArrayList<Report> getReports(String accNum){
+		try {
+			return bm.getReports(accNum);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

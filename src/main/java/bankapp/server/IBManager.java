@@ -2,6 +2,7 @@ package bankapp.server;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 /**
  *@author BICHRI
  *@date 05-17-2017
@@ -23,4 +24,5 @@ public interface IBManager extends Remote {
 	public void deleteAccount(String user) throws RemoteException;
 	public void createUser(String username, String pass, String email) throws RemoteException;
 	public User getUser(String user) throws RemoteException;
+	public ArrayList<Report> getReports(String accNum) throws RemoteException;
 }

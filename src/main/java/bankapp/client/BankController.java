@@ -97,7 +97,7 @@ public class BankController {
 	}
 	
 	public ArrayList<Report> getReports(String accNum){
-		return null;
+		return rsl.getReports(accNum);
 		
 	}
 }

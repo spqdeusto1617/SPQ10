@@ -14,7 +14,7 @@ public class User extends Account{
 	private String email;
 	@Persistent(defaultFetchGroup="true")
 	@Join
-	private HashMap<String, bankAccount> accounts;
+	private HashMap<String, BankAccount> accounts;
 	/**
 	 * @brief constractor
 	 * @param username
@@ -33,11 +33,11 @@ public class User extends Account{
 		this.accounts.get(accNum).addmoney(money);
 	}
 	public int createAccount(){
-		bankAccount acc = new bankAccount();
+		BankAccount acc = new BankAccount();
 		addAccount(acc);
 		return acc.getnumAcc();
 	}
-	public void addAccount(bankAccount acc){
+	public void addAccount(BankAccount acc){
 		this.accounts.put(Integer.toString(acc.getnumAcc()), acc);
 	}
 	public String getEmail() {
@@ -49,7 +49,10 @@ public class User extends Account{
 	public void deleteAccount(String accNum){
 		this.accounts.remove(accNum);
 	}
-	public bankAccount getAccount(String accNum){
+	public BankAccount getAccount(String accNum){
 		return this.accounts.get(accNum);
+	}
+	public HashMap<String, BankAccount> getAccounts(){
+		return this.accounts;
 	}
 }

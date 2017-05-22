@@ -22,7 +22,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
  * @brief variable tyoe int to store the port 
  * @brief variable type string to store server name
  */
-	bankDAO bd = new bankDAO();
+	BankDAO bd = new BankDAO();
 	String serverAddress;
 	int port0;
 	String servName;
@@ -88,7 +88,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		User userObj = (User) bd.getAccount(user);
 		int banknum = userObj.createAccount();
 		bd.storeAccount(userObj);
-		bd.storeReport(new Report(user));
+		bd.storeReport(new Report(user, Integer.toString(banknum)));
 		LOGGER.log(Level.FINE, "Created bank account for user " + user + " with number: " + banknum);
 		return banknum;
 	}
@@ -119,6 +119,11 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		System.out.println(username + pass + email);
 		bd.storeAccount(new User(username, pass, email));
 		LOGGER.log(Level.FINE, "User " + username + "created");
+	}
+	
+	public User getUser(String user){
+		System.out.println(user);
+		return (User) bd.getAccount(user);
 	}
 
 }

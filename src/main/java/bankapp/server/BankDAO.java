@@ -7,17 +7,23 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
-
-
-//Class in charge of communications with the database
-public class bankDAO implements IbankDAO {
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the bank DAO Class
+ */
+public class BankDAO implements IbankDAO {
+	/**
+	 * @brief Private variable type PersistenceManagerFactory 
+	 */
 	private PersistenceManagerFactory pmf;
-	public bankDAO(){
+	/**
+	 * @brief Constractore for class bankDAO
+	 */
+	public BankDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 }
 
-	//gets account information from the db with the username
-	@Override
 	public Account getAccount(String username) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		/* By default only 1 level is retrieved from the db
@@ -83,7 +89,6 @@ public class bankDAO implements IbankDAO {
 	    }
 	}
 
-	@Override
 	public void deleteAccount(String username) {
 		// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();

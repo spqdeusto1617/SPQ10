@@ -14,7 +14,7 @@ public class Report {
 	private String user2;
 	private String accNum1;
 	private String accNum2;
-	private String reportType;
+	private char reportType;
 	private long money;
 	@PrimaryKey
 	private int id;
@@ -35,17 +35,18 @@ public class Report {
 		this.money = money;
 		reports++;
 		this.id = reports;
-		this.reportType = "User-User transaction";
+		this.reportType = 't';
 	}
 	/**
 	 * @brief constractor 2
 	 * @param user1
 	 */
-	public Report(String user1){
+	public Report(String user1, String accNum1){
+		this.accNum1 = accNum1;
 		this.user1 = user1;
 		reports++;
 		this.id = reports;
-		this.reportType = "Account creation";
+		this.reportType = 'c';
 	}
 	/**
 	 * @brief constractor 3
@@ -59,13 +60,13 @@ public class Report {
 		this.money = money;
 		reports++;
 		this.id = reports;
-		this.reportType = "funds added";
+		this.reportType = 'f';
 	}
 	/**
 	 * @brief get the report type
 	 * @return reportType
 	 */
-	public String getReportType(){
+	public char getReportType(){
 		return reportType;
 	}
 	/**
@@ -109,5 +110,18 @@ public class Report {
 	 */
 	public long getMoney(){
 		return money;
+	}
+	
+	public String toString(){
+		if(reportType=='t'){
+			return "Transaction from user " + user1 + "(" + accNum1 + ") to user " + user2 + "(" + accNum2 + ") of amount " + money;
+		}
+		else if(reportType=='c'){
+			return "User " + user1 + " created account " + accNum1;
+		}
+		else if(reportType=='f'){
+			return "User " + user1 + " added amount " + money + " to account " + accNum1;
+		}
+		else return null;
 	}
 }

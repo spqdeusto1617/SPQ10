@@ -17,7 +17,7 @@ public class bankAccountTest {
      * @brief create a valid account
      */
     public void validAccount() {
-        bankAccount account = new bankAccount();
+        BankAccount account = new BankAccount();
         account.addmoney(100);
         assertTrue(account != null);
         assertThat(account.getmoney(), is(100L));

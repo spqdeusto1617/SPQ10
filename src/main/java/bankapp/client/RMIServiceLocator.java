@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import bankapp.server.IBManager;
+import bankapp.server.User;
 /**
  *@author BICHRI
  *@date 05-17-2017
@@ -129,5 +130,15 @@ public class RMIServiceLocator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public User getUser(String user){
+		try{
+			return bm.getUser(user);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

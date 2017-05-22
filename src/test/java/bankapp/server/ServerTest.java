@@ -1,13 +1,13 @@
 package bankapp.server;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.rmi.RemoteException;
 
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.LoggerFactory;
 
 import junit.framework.JUnit4TestAdapter;
 /**
@@ -19,7 +19,7 @@ public class ServerTest {
 	BankDAO bd;
 	BManager bManager;
 
-	final Logger logger = (Logger) LoggerFactory.getLogger(ServerTest.class);
+	final Logger logger = LogManager.getLogger(ServerTest.class);
 	 
 	public static junit.framework.Test suite() {
 		 return new JUnit4TestAdapter(ServerTest.class);

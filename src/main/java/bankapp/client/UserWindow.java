@@ -1,6 +1,9 @@
 package bankapp.client;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
@@ -16,6 +19,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
 
 import bankapp.server.BankAccount;
+import bankapp.server.Report;
 import bankapp.server.User;
 
 public class UserWindow extends JFrame {
@@ -67,7 +71,7 @@ public class UserWindow extends JFrame {
 		
 		JLabel lblAccountList = new JLabel("Account List");
 		
-		JList<String> list_1 = new JList<String>();
+		JList<Report> reportList = new JList<Report>();
 		
 		JLabel lblAccountReports = new JLabel("Account Reports");
 		
@@ -113,7 +117,7 @@ public class UserWindow extends JFrame {
 					.addGap(18)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblAccountReports)
-						.addComponent(list_1, GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
+						.addComponent(reportList, GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
 						.addGroup(gl_panel.createSequentialGroup()
 							.addComponent(btnNewBankAccount)
 							.addPreferredGap(ComponentPlacement.RELATED)
@@ -157,7 +161,7 @@ public class UserWindow extends JFrame {
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(bankAccountJList, GroupLayout.PREFERRED_SIZE, 349, GroupLayout.PREFERRED_SIZE)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addComponent(list_1, GroupLayout.PREFERRED_SIZE, 168, GroupLayout.PREFERRED_SIZE)
+							.addComponent(reportList, GroupLayout.PREFERRED_SIZE, 168, GroupLayout.PREFERRED_SIZE)
 							.addGap(5)
 							.addComponent(lblTransaction)
 							.addGap(8)
@@ -196,6 +200,26 @@ public class UserWindow extends JFrame {
 		panel_1.add(list_2, BorderLayout.CENTER);
 		contentPane.setLayout(gl_contentPane);
 		accountList();
+		
+		MouseListener mouseListener = new MouseAdapter() {
+		    public void mouseClicked(MouseEvent e) {
+		        if (e.getClickCount() == 2) {
+
+
+		           BankAccount bankaccount = (BankAccount) bankAccountJList.getSelectedValue();
+		           
+		           // add selectedItem to your second list.
+		           DefaultListModel<Report> model = (DefaultListModel<Report>) reportList.getModel();
+		           if(model == null)
+		           {
+		                 model = new DefaultListModel<Report>();
+		                 reportList.setModel(model);
+		           }
+		           model.addElement(null);
+
+		         }
+		    }
+		};
 	}
 	
 	private void accountList(){
@@ -205,8 +229,5 @@ public class UserWindow extends JFrame {
 		}
 		bankAccountJList.setModel(bankAccountList);
 	}
-	
-	private void reportList(){
-		
-	}
+
 }

@@ -1,5 +1,8 @@
 package bankapp.client;
 
+import java.util.ArrayList;
+
+import bankapp.server.Report;
 import bankapp.server.User;
 
 /**
@@ -91,5 +94,10 @@ public class BankController {
 	
 	public User getUser(String user){
 		return rsl.getUser(user);
+	}
+	
+	public ArrayList<Report> getReports(String accNum){
+		return null;
+		
 	}
 }

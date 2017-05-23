@@ -6,10 +6,16 @@ import javax.jdo.annotations.*;
 @PersistenceCapable(detachable = "true")
 @Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 @Discriminator(strategy=DiscriminatorStrategy.CLASS_NAME)
+
 public class Account {
 	@PrimaryKey
 	private String username;
 	private String pass;
+	/**
+	 * @brief Constructor
+	 * @param username
+	 * @param pass
+	 */
 	public Account(String username, String pass){
 		this.username = username;
 		this.pass = pass;

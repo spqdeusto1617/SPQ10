@@ -5,16 +5,28 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the BDTest class 
+ */
+
 public class BDTest {
-	bankDAO bd;
+	BankDAO bd;
 	@Before
+	/**
+	 * @brief initialise bankDAO object
+	 */
 	public void setup(){
-		bd = new bankDAO();
+		bd = new BankDAO();
 	}
 	
 	@Test
+	/**
+	 * @brief create a valid DB
+	 */
 	public void validBD(){
-		 User user = new User("testuser", "testpassword", "email@example.com");
+		 User user = new User("testuser", "testpassword", "testemail@example.com");
 		 bd.storeAccount(user);
 		 User user1 = (User) bd.getAccount(user.getUsername());
 		 Admin admin = new Admin("testadminuser", "testadminpass");

@@ -1,14 +1,20 @@
 package bankapp.server;
 
+import java.io.Serializable;
+
 import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable(detachable="true")
-public class bankAccount {
+public class BankAccount implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static int accounts = 0;
 	private int numAcc;
 	private long money;
 	
-	public bankAccount(){
+	public BankAccount(){
 		accounts++;
 		this.numAcc = accounts;
 		this.money = 0;
@@ -25,5 +31,7 @@ public class bankAccount {
 	public void deducemoney(long money){
 		this.money -= money;
 	}
-
+	public String toString(){
+		return numAcc + " // " + money;
+	}
 }

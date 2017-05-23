@@ -2,31 +2,53 @@ package bankapp.server;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the bank manger Class extends UnicastRemoteObject and implements IBManager
+ */
 public class BManager extends UnicastRemoteObject implements IBManager {
 
 	/**
-	 * 
+	 * @brief Static variable type long 
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	private static final Logger LOGGER = Logger.getLogger(BManager.class.getName() );
-	
-	bankDAO bd = new bankDAO();
+/**
+ * @brief variable type bankDAO 
+ * @briefvariable type string to store the server adress 
+ * @brief variable tyoe int to store the port 
+ * @brief variable type string to store server name
+ */
+	BankDAO bd = new BankDAO();
 	String serverAddress;
 	int port0;
 	String servName;
-	//Manager is in charge of the providing the client with methods (facade)
+/**
+ * @brief BManager Constructor and also store an new user  
+ * @param serverAddress
+ * @param port0
+ * @param servName
+ * @throws RemoteException
+ */
 	public BManager(String serverAddress, String port0, String servName) throws RemoteException {
 		super();
 		this.serverAddress = serverAddress;
 		this.port0 = Integer.parseInt(port0);
 		this.servName = servName;
 		bd.storeAccount(new Admin("adminuser", "adminpass"));
+		bd.storeAccount(new User("user", "pass", "user@email.com"));
 	}
-		
+/**
+ * @brief Function Login as a bank manager allow or deny access 
+ * @param username
+ * @param pass
+ * @return char
+ * @throws RemoteException
+ */
 	public char login(String username, String pass) throws RemoteException {
 		try{
 			Account login = bd.getAccount(username);
@@ -48,8 +70,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 			return 'e';
 		}
 	}
-
-	@Override
 	public void transaction(String user1, String user2, long money, String accNum1, String accNum2) throws RemoteException {
 		LOGGER.log(Level.FINE, "performing transaction: " + user1 + "---->" + user2 );
 		User user1Obj = (User) bd.getAccount(user1);
@@ -66,12 +86,11 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		bd.storeReport(new Report(user1, user2, money, accNum1, accNum2));
 	}
 
-	@Override
 	public int createBankAccount(String user) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		int banknum = userObj.createAccount();
 		bd.storeAccount(userObj);
-		bd.storeReport(new Report(user));
+		bd.storeReport(new Report(user, Integer.toString(banknum)));
 		LOGGER.log(Level.FINE, "Created bank account for user " + user + " with number: " + banknum);
 		return banknum;
 	}
@@ -84,7 +103,6 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		LOGGER.log(Level.FINE, "Added " + money + " for user: " + user);
 	}
 
-	@Override
 	public void deleteBankAccount(String user, String accNum1, String accNum2) throws RemoteException {
 		User userObj = (User) bd.getAccount(user);
 		transaction(user, user, userObj.getAccount(accNum1).getmoney(), accNum1, accNum2);
@@ -93,17 +111,25 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		LOGGER.log(Level.FINE, "Bank account number " + accNum1 + " deleted for user: " + user);
 	}
 
-	@Override
+
 	public void deleteAccount(String user) throws RemoteException {
 		bd.deleteAccount(user);
 		LOGGER.log(Level.FINE, "User " + user + " deleted");
 	}
 
-	@Override
 	public void createUser(String username, String pass, String email) throws RemoteException {
 		System.out.println(username + pass + email);
 		bd.storeAccount(new User(username, pass, email));
 		LOGGER.log(Level.FINE, "User " + username + "created");
+	}
+	
+	public User getUser(String user){
+		System.out.println(user);
+		return (User) bd.getAccount(user);
+	}
+	
+	public ArrayList<Report> getReports(int accNum){
+		return bd.getReports(accNum);
 	}
 
 }

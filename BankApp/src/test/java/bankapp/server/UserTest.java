@@ -1,25 +1,20 @@
 package bankapp.server;
 
-import bankapp.server.User;
-import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-
-import javax.validation.*;
-
+import org.junit.Test;
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the UserTest class 
+ */
 public class UserTest {
 
-    protected static Validator validator;
-
-//    @Before
-//    public void setup() {
-//        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-//        validator = factory.getValidator();
-//    }
-
     @Test
+    /**
+     * @brief create valid user 
+     */
     public void validUser() {
         User user = new User("username", "password", "email@example.com");
         int accountnum = user.createAccount();
@@ -32,14 +27,20 @@ public class UserTest {
     }
 
     @Test
+    /**
+     * @brief test the add funds 
+     */
     public void testAddFunds(){
     	User user = new User("username", "password", "email@example.com");
         int accountnum = user.createAccount();
         String accNum = Integer.toString(accountnum);
-        user.addFundstoAccount(accNum, 250);    	
+        user.addFundstoAccount(accNum, 250);
     }
     
     @Test
+    /**
+     * @brief test a transaction
+     */
     public void testTransaction(){
     	User user1 = new User("username", "password", "email@example.com");
     	User user2 = new User("username2", "password2", "email2@example.com");
@@ -52,15 +53,4 @@ public class UserTest {
     	assertTrue(user2.getAccount(accNum2).getmoney() == 500);
     	assertTrue(user1.getAccount(accNum1).getmoney() == -500);
     }
-    /* TODO - review validation fields annotations */
-//    @Test(expected = ConstraintViolationException.class)
-//    public void invalidUser() {
-//        User user = new User("", "", "");
-//        assertTrue(user != null);
-//        assertFalse(validate(user).isEmpty());
-//    }
-//
-//    public static <T> Set<ConstraintViolation<T>> validate(T obj) {
-//        return validator.validate(obj);
-//    }
 }

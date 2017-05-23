@@ -1,14 +1,36 @@
 package bankapp.server;
 
+import java.io.Serializable;
 import java.util.HashMap;
-import javax.jdo.annotations.*;
+
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+
 @PersistenceCapable(detachable = "true")
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
-public class User extends Account{
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the User 
+ */
+public class User extends Account implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String email;
 	@Persistent(defaultFetchGroup="true")
 	@Join
-	private HashMap<String, bankAccount> accounts;
+	private HashMap<String, BankAccount> accounts;
+	/**
+	 * @brief constractor
+	 * @param username
+	 * @param pass
+	 * @param email
+	 */
 	public User(String username, String pass, String email){
 		super(username, pass);
 		this.email = email;
@@ -21,11 +43,11 @@ public class User extends Account{
 		this.accounts.get(accNum).addmoney(money);
 	}
 	public int createAccount(){
-		bankAccount acc = new bankAccount();
+		BankAccount acc = new BankAccount();
 		addAccount(acc);
 		return acc.getnumAcc();
 	}
-	public void addAccount(bankAccount acc){
+	public void addAccount(BankAccount acc){
 		this.accounts.put(Integer.toString(acc.getnumAcc()), acc);
 	}
 	public String getEmail() {
@@ -37,7 +59,10 @@ public class User extends Account{
 	public void deleteAccount(String accNum){
 		this.accounts.remove(accNum);
 	}
-	public bankAccount getAccount(String accNum){
+	public BankAccount getAccount(String accNum){
 		return this.accounts.get(accNum);
+	}
+	public HashMap<String, BankAccount> getAccounts(){
+		return this.accounts;
 	}
 }

@@ -27,7 +27,20 @@
 		</plugins>
 	</reporting>
 	
+	
   <dependencies>
+  	<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+			<scope>compile</scope>
+		</dependency>
+	<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+			<scope>compile</scope>
+		</dependency> 
   	  <dependency>
 		  <groupId>org.hibernate</groupId>
 		  <version>5.2.4.Final</version>
@@ -102,20 +115,19 @@
                 <artifactId>datanucleus-maven-plugin</artifactId>
                 <version>5.0.2</version>
                 <configuration>
-                    <log4jConfiguration>${config.files.dir}/log4j.properties</log4jConfiguration>
+                   <log4jConfiguration>${config.files.dir}/log4j.properties</log4jConfiguration>
                     <verbose>true</verbose>
                     <props>${config.files.dir}/datanucleus.properties</props>
                 </configuration>
                 <executions>
-                    <execution>
-                        <phase>compile</phase>
+                 <execution>
+                       <phase>compile</phase>
                         <goals>
                             <goal>enhance</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-			
+            </plugin>		
         </plugins>
      </build>
 	
@@ -156,7 +168,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.6.0</version>
 						<configuration>
-							<mainClass>bankapp.server.bankServer</mainClass>
+							<mainClass>bankapp.server.BankServer</mainClass>
 							<systemProperties>
 								<systemProperty>
 									<key>java.security.manager</key>
@@ -191,7 +203,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.6.0</version>
 						<configuration>
-							<mainClass>bankapp.client.bankClient</mainClass>
+							<mainClass>bankapp.client.LoginWindow</mainClass>
 							<systemProperties>
 								<systemProperty>
 									<key>java.security.manager</key>

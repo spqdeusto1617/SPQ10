@@ -4,10 +4,17 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the ReportTest class 
+ */
 public class ReportTest {
 
 	@Test
+	/**
+	 * @brief create a valid report 
+	 */
 	public void validReport(){
 		Report report = new Report("user1", "user2", 4124, "1", "2");
 		assertTrue(report != null);

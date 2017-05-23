@@ -131,5 +131,10 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 	public ArrayList<Report> getReports(int accNum){
 		return bd.getReports(accNum);
 	}
+	@Override
+	public ArrayList<User> getUsers() throws RemoteException {
+		// TODO Auto-generated method stub
+		return bd.getUsers();
+	}
 
 }

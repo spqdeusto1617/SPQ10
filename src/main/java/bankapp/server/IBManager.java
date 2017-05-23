@@ -25,4 +25,5 @@ public interface IBManager extends Remote {
 	public void createUser(String username, String pass, String email) throws RemoteException;
 	public User getUser(String user) throws RemoteException;
 	public ArrayList<Report> getReports(int accNum) throws RemoteException;
+	public ArrayList<User> getUsers() throws RemoteException;
 }

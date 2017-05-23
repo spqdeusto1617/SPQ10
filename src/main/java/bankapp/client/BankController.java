@@ -99,6 +99,9 @@ public class BankController {
 	public ArrayList<Report> getReports(int accNum){
 		System.out.println("Getting reports");
 		return rsl.getReports(accNum);
-		
+	}
+	public ArrayList<User> getUsers(){
+		System.out.println("Retrieving users");
+		return rsl.getUsers();
 	}
 }

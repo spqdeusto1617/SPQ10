@@ -31,4 +31,6 @@ public interface IBankDAO {
 	public void deleteAccount(String username);
 	
 	public ArrayList<Report> getReports(int accNum);
+	
+	public ArrayList<User> getUsers();
 }

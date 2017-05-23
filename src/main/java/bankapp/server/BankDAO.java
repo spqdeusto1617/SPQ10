@@ -142,4 +142,32 @@ public class BankDAO implements IBankDAO {
 		    		}
 		    		return reports;
 	}
+
+	@Override
+	public ArrayList<User> getUsers() {// TODO Auto-generated method stub
+		PersistenceManager pm = pmf.getPersistenceManager();
+		/* By default only 1 level is retrieved from the db
+		 * so if we wish to fetch more than one level, we must indicate it
+		 */
+		pm.getFetchPlan().setMaxFetchDepth(10);
+		
+		Transaction tx = pm.currentTransaction();
+		ArrayList<User> users = new ArrayList<User>();
+			System.out.println("   * Retrieving an Extent for Report.");
+			
+			tx.begin();
+			System.out.println("Retrieving users ");
+			Query<?> query = pm.newQuery("SELECT * FROM " + User.class.getName());
+			@SuppressWarnings("unchecked")
+			List<User> usersList =	(List<User>) query.executeList();
+			tx.commit();			
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close();
+    		for(User user : usersList){
+    			users.add(user);
+    		}
+    		return users;
+	}
 }

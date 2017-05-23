@@ -154,4 +154,14 @@ public class RMIServiceLocator {
 		}
 		return null;
 	}
+	
+	public ArrayList<User> getUsers(){
+		try {
+			return bm.getUsers();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

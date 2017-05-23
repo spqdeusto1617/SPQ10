@@ -40,6 +40,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		this.port0 = Integer.parseInt(port0);
 		this.servName = servName;
 		bd.storeAccount(new Admin("adminuser", "adminpass"));
+		bd.storeAccount(new User("user", "pass", "user@email.com"));
 	}
 /**
  * @brief Function Login as a bank manager allow or deny access 
@@ -127,7 +128,7 @@ public class BManager extends UnicastRemoteObject implements IBManager {
 		return (User) bd.getAccount(user);
 	}
 	
-	public ArrayList<Report> getReports(String accNum){
+	public ArrayList<Report> getReports(int accNum){
 		return bd.getReports(accNum);
 	}
 

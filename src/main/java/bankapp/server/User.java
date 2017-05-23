@@ -1,7 +1,13 @@
 package bankapp.server;
 
+import java.io.Serializable;
 import java.util.HashMap;
-import javax.jdo.annotations.*;
+
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable(detachable = "true")
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
@@ -10,7 +16,11 @@ import javax.jdo.annotations.*;
  *@date 05-17-2017
  *@brief This is the User 
  */
-public class User extends Account{
+public class User extends Account implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String email;
 	@Persistent(defaultFetchGroup="true")
 	@Join

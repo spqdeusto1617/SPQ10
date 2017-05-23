@@ -1,9 +1,15 @@
 package bankapp.server;
 
+import java.io.Serializable;
+
 import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable(detachable="true")
-public class BankAccount {
+public class BankAccount implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static int accounts = 0;
 	private int numAcc;
 	private long money;

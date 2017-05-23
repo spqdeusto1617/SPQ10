@@ -145,7 +145,7 @@ public class RMIServiceLocator {
 		return null;
 	}
 	
-	public ArrayList<Report> getReports(String accNum){
+	public ArrayList<Report> getReports(int accNum){
 		try {
 			return bm.getReports(accNum);
 		} catch (RemoteException e) {

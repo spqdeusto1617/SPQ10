@@ -1,5 +1,7 @@
 package bankapp.server;
 
+import java.io.Serializable;
+
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
@@ -9,7 +11,11 @@ import javax.jdo.annotations.PrimaryKey;
  *@date 05-17-2017
  *@brief This is the Report 
  */
-public class Report {
+public class Report implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String user1;
 	private String user2;
 	private String accNum1;

@@ -1,9 +1,12 @@
 package bankapp.client;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
@@ -27,9 +30,9 @@ public class UserWindow extends JFrame {
 	/**
 	 * 
 	 */
+	 DefaultListModel<Report> reportModel = new DefaultListModel<Report>();
 	private javax.swing.DefaultListModel<BankAccount> bankAccountList = new DefaultListModel<BankAccount>();
 	private static final long serialVersionUID = 1L;
-	private User user;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -46,7 +49,6 @@ public class UserWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public UserWindow(final BankController bc, String name) {
-		user = bc.getUser(name);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 760, 480);
 		contentPane = new JPanel();
@@ -71,11 +73,22 @@ public class UserWindow extends JFrame {
 		
 		JLabel lblAccountList = new JLabel("Account List");
 		
-		JList<Report> reportList = new JList<Report>();
+		JList<Report> reportJList = new JList<Report>();
 		
 		JLabel lblAccountReports = new JLabel("Account Reports");
 		
 		JButton btnNewBankAccount = new JButton("New Bank Account");
+		
+		btnNewBankAccount.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				bc.createBankAccount(name);
+				accountList(bc.getUser(name));
+			}
+			
+		});
 		
 		JLabel lblTransaction = new JLabel("Transaction");
 		
@@ -96,8 +109,28 @@ public class UserWindow extends JFrame {
 		
 		JButton btnCreateTransaction = new JButton("Create Transaction");
 		
+		btnCreateTransaction.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				bc.transaction(name, textField.getText(), Long.parseLong(textField_2.getText()), Integer.toString(bankAccountJList.getSelectedValue().getnumAcc()), textField_1.getText());
+				accountList(bc.getUser(name));
+			}
+			
+		});
+		
 		JButton btnDeleteBankAccount = new JButton("Delete Bank Account");
 		
+		btnDeleteBankAccount.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 		JLabel lblAddFunds = new JLabel("Add Funds");
 		
 		JLabel lblAmount_1 = new JLabel("amount");
@@ -106,6 +139,16 @@ public class UserWindow extends JFrame {
 		textField_3.setColumns(10);
 		
 		JButton btnAddFunds = new JButton("Add Funds");
+		btnAddFunds.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				bc.addFunds(name, Integer.toString(bankAccountJList.getSelectedValue().getnumAcc()), Long.parseLong(textField_3.getText()));
+				accountList(bc.getUser(name));
+			}
+			
+		});
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -117,7 +160,7 @@ public class UserWindow extends JFrame {
 					.addGap(18)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblAccountReports)
-						.addComponent(reportList, GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
+						.addComponent(reportJList, GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
 						.addGroup(gl_panel.createSequentialGroup()
 							.addComponent(btnNewBankAccount)
 							.addPreferredGap(ComponentPlacement.RELATED)
@@ -161,7 +204,7 @@ public class UserWindow extends JFrame {
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(bankAccountJList, GroupLayout.PREFERRED_SIZE, 349, GroupLayout.PREFERRED_SIZE)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addComponent(reportList, GroupLayout.PREFERRED_SIZE, 168, GroupLayout.PREFERRED_SIZE)
+							.addComponent(reportJList, GroupLayout.PREFERRED_SIZE, 168, GroupLayout.PREFERRED_SIZE)
 							.addGap(5)
 							.addComponent(lblTransaction)
 							.addGap(8)
@@ -199,30 +242,25 @@ public class UserWindow extends JFrame {
 		JList list_2 = new JList();
 		panel_1.add(list_2, BorderLayout.CENTER);
 		contentPane.setLayout(gl_contentPane);
-		accountList();
+		accountList(bc.getUser(name));
+		reportJList.setModel(reportModel);
 		
 		MouseListener mouseListener = new MouseAdapter() {
 		    public void mouseClicked(MouseEvent e) {
 		        if (e.getClickCount() == 2) {
-
-
-		           BankAccount bankaccount = (BankAccount) bankAccountJList.getSelectedValue();
-		           
+		        	reportModel.clear();
+		        	ArrayList<Report> reports = bc.getReports(bankAccountJList.getSelectedValue().getnumAcc());
 		           // add selectedItem to your second list.
-		           DefaultListModel<Report> model = (DefaultListModel<Report>) reportList.getModel();
-		           if(model == null)
-		           {
-		                 model = new DefaultListModel<Report>();
-		                 reportList.setModel(model);
+		           for(Report report : reports){
+			           reportModel.addElement(report);
 		           }
-		           model.addElement(null);
-
 		         }
 		    }
 		};
+		bankAccountJList.addMouseListener(mouseListener);
 	}
 	
-	private void accountList(){
+	private void accountList(User user){
 		bankAccountList.clear();
 		for (BankAccount bankAccount : user.getAccounts().values()) {
 			bankAccountList.addElement(bankAccount);

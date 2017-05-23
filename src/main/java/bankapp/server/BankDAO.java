@@ -1,6 +1,7 @@
 package bankapp.server;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
@@ -114,7 +115,7 @@ public class BankDAO implements IBankDAO {
     		pm.close();
 		
 	}
-	public ArrayList<Report> getReports(String accNum){
+	public ArrayList<Report> getReports(int accNum){
 		// TODO Auto-generated method stub
 				PersistenceManager pm = pmf.getPersistenceManager();
 				/* By default only 1 level is retrieved from the db
@@ -123,19 +124,22 @@ public class BankDAO implements IBankDAO {
 				pm.getFetchPlan().setMaxFetchDepth(10);
 				
 				Transaction tx = pm.currentTransaction();
-				Account account = null;
+				ArrayList<Report> reports = new ArrayList<Report>();
 					System.out.println("   * Retrieving an Extent for Report.");
 					
 					tx.begin();
 					System.out.println("Retrieving reports for " + accNum );
 					Query<?> query = pm.newQuery("SELECT FROM " + Report.class.getName() + " WHERE accNum1 == '" + accNum + "'");
-			    	account = (Account)query.execute();
+					@SuppressWarnings("unchecked")
+					List<Report> reportslist =	(List<Report>) query.executeList();
 					tx.commit();			
 			    	if (tx != null && tx.isActive()) {
 			    		tx.rollback();
 			    	}
-			    	pm.deletePersistent(account);
 		    		pm.close();
-		    		return null;
+		    		for(Report report : reportslist){
+		    			reports.add(report);
+		    		}
+		    		return reports;
 	}
 }

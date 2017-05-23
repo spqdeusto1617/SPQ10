@@ -45,6 +45,7 @@ public class LoginWindow extends JFrame {
 
 			public void run() {
 				try {
+					bc = new BankController(args[0], args[1], args[2]);
 					LoginWindow frame = new LoginWindow(bc);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -87,13 +88,10 @@ public class LoginWindow extends JFrame {
 		panel_3.setBackground(new Color(204, 255, 102));
 		panel_1.add(panel_3, BorderLayout.EAST);
 
-		JButton btnFaceBook = new JButton("FaceBook");
-		btnFaceBook.setBackground(new Color(102, 153, 255));
-		btnFaceBook.setForeground(new Color(0, 0, 255));
-		panel_3.add(btnFaceBook);
-
-		JLabel lblNewLabel = new JLabel("Choose your Sign in method");
-		panel_1.add(lblNewLabel, BorderLayout.WEST);
+		JButton btnLogin = new JButton("Login");
+		btnLogin.setBackground(new Color(102, 153, 255));
+		btnLogin.setForeground(new Color(0, 0, 255));
+		panel_3.add(btnLogin);
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(204, 255, 102));
@@ -117,7 +115,7 @@ public class LoginWindow extends JFrame {
 		passwordFieldPassword.setBounds(166, 92, 180, 20);
 		panel_2.add(passwordFieldPassword);
 
-		JLabel lblEasyBooking = new JLabel("Easy Booking");
+		JLabel lblEasyBooking = new JLabel("Easy Bank");
 		lblEasyBooking.setFont(new Font("Monotype Corsiva", Font.PLAIN, 29));
 		lblEasyBooking.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEasyBooking.setBounds(76, 11, 270, 33);
@@ -129,7 +127,7 @@ public class LoginWindow extends JFrame {
 		lblUsernameOrPassword.setVisible(false);
 		panel_2.add(lblUsernameOrPassword);
 
-		btnFaceBook.addActionListener(new ActionListener() {
+		btnLogin.addActionListener(new ActionListener() {
 
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {

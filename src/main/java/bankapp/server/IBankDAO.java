@@ -1,4 +1,7 @@
 package bankapp.server;
+
+import java.util.ArrayList;
+
 /**
  *@author BICHRI
  *@date 05-17-2017
@@ -26,4 +29,6 @@ public interface IBankDAO {
 	 * @param acc
 	 */
 	public void deleteAccount(String username);
+	
+	public ArrayList<Report> getReports(int accNum);
 }

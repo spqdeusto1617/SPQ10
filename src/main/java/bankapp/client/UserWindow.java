@@ -24,7 +24,13 @@ import javax.swing.border.EmptyBorder;
 import bankapp.server.BankAccount;
 import bankapp.server.Report;
 import bankapp.server.User;
-
+/**
+ * @author BICHRI
+ * 
+ * @date 05-17-2017
+ * 
+ * @brief This is the UserWindow Class
+ */
 public class UserWindow extends JFrame {
 
 	/**
@@ -39,13 +45,15 @@ public class UserWindow extends JFrame {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JList<BankAccount> bankAccountJList;
-	/**
-	 * Launch the application.
-	 */
+/**
+ * Launch the application.
+ * @param args
+ */
 	public static void main(String[] args) {
 	}
 
 	/**
+	 * @param bc , name
 	 * Create the frame.
 	 */
 	public UserWindow(final BankController bc, String name) {
@@ -82,6 +90,9 @@ public class UserWindow extends JFrame {
 		btnNewBankAccount.addActionListener(new ActionListener(){
 
 			@Override
+			/**
+			 * 
+			 */
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				bc.createBankAccount(name);
@@ -259,7 +270,10 @@ public class UserWindow extends JFrame {
 		};
 		bankAccountJList.addMouseListener(mouseListener);
 	}
-	
+	/**
+	 * Show account list for a user
+	 * @param user
+	 */
 	private void accountList(User user){
 		bankAccountList.clear();
 		for (BankAccount bankAccount : user.getAccounts().values()) {

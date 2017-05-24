@@ -7,6 +7,11 @@ import javax.jdo.annotations.*;
 @Inheritance(strategy=InheritanceStrategy.NEW_TABLE)
 @Discriminator(strategy=DiscriminatorStrategy.CLASS_NAME)
 
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the Account Class
+ */
 public class Account {
 	@PrimaryKey
 	private String username;
@@ -20,15 +25,28 @@ public class Account {
 		this.username = username;
 		this.pass = pass;
 	}
+	/**
+	 * @brief get the user name
+	 * @return username
+	 */
 	public String getUsername() {
 		return this.username;
 	}
+	/**
+	 * @brief get the user password
+	 * @return pass
+	 */
 	public String getPass() {
 		return this.pass;
 	}
+	/**
+	 * @brief set the user password
+	 * @param pass
+	 */
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
 	public String toString(){
 		return username;
 	}

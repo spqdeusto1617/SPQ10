@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['updateaccount',['updateAccount',['../classbankapp_1_1server_1_1bankDAO.html#a22f03ae02432bc82af70d212a7a8cdba',1,'bankapp.server.bankDAO.updateAccount()'],['../interfacebankapp_1_1server_1_1IbankDAO.html#a0ee7aa6b093e2695955296dd72411b0c',1,'bankapp.server.IbankDAO.updateAccount()']]],
-  ['updateuser',['updateUser',['../classbankapp_1_1server_1_1bankDAO.html#ab3ed5a9b972ea31ebc023596efecb2d1',1,'bankapp.server.bankDAO.updateUser()'],['../interfacebankapp_1_1server_1_1IbankDAO.html#a5c38ce2000e71e9c9892bf2d357103bc',1,'bankapp.server.IbankDAO.updateUser()']]],
-  ['user',['User',['../classbankapp_1_1server_1_1User.html#ae5d0c0c37ed136f1c3e7534a4af49105',1,'bankapp::server::User']]]
+  ['report',['Report',['../classbankapp_1_1server_1_1Report.html#a842bc4f0ce3a205c970598a45623cdd9',1,'bankapp.server.Report.Report(String user1, String user2, long money, String accNum1, String accNum2)'],['../classbankapp_1_1server_1_1Report.html#ae9801d49f0490d3024fe91b617d0d59b',1,'bankapp.server.Report.Report(String user1, String accNum1)'],['../classbankapp_1_1server_1_1Report.html#a4a9d45b7668e0733be35fa9fc1ae4479',1,'bankapp.server.Report.Report(String user1, String accNum1, long money)']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['testapp',['testApp',['../classes_1_1deusto_1_1spq_1_1AppTest.html#afe47d45327289bf35acf77252c8e5273',1,'es::deusto::spq::AppTest']]],
-  ['tostring',['toString',['../classbankapp_1_1server_1_1User.html#a9c6aa2df5a2c7d9cd8b4c4a228f7cbeb',1,'bankapp::server::User']]]
+  ['main',['main',['../classbankapp_1_1client_1_1AdminWindow.html#a8d8a28b3681d2e7b4bf3fc0c7e05eacf',1,'bankapp.client.AdminWindow.main()'],['../classbankapp_1_1client_1_1BankClient.html#a00fc07b5a74a2535ed419df3b014dc71',1,'bankapp.client.BankClient.main()'],['../classbankapp_1_1client_1_1bankClient.html#ad22392d35ad10f91cc417f169b69ff7b',1,'bankapp.client.bankClient.main()'],['../classbankapp_1_1client_1_1LoginWindow.html#a8488f49e36d00e09f2b531b8ef7a7fce',1,'bankapp.client.LoginWindow.main()'],['../classbankapp_1_1client_1_1UserWindow.html#a51aed6cb14dee3861a6014328f0c9c7b',1,'bankapp.client.UserWindow.main()'],['../classbankapp_1_1server_1_1BankServer.html#ada9de91a3427f3daf338ee06b74b1cf1',1,'bankapp.server.BankServer.main()'],['../classtest_1_1java_1_1es_1_1deusto_1_1spq_1_1Performance.html#a4ceaf9fc62e27fe7b4cb3b9c126d3bee',1,'test.java.es.deusto.spq.Performance.main()']]]
 ];

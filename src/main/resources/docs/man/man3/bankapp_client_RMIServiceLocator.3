@@ -1,4 +1,4 @@
-.TH "bankapp.client.RMIServiceLocator" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.TH "bankapp.client.RMIServiceLocator" 3 "Wed May 24 2017" "BankApp" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,9 +15,42 @@ bankapp.client.RMIServiceLocator \- This is the bank RMIServices hundler Class\&
 .br
 .RI "set the service of an RMI "
 .ti -1c
-.RI "boolean \fBlogin\fP (String user, String pass)"
+.RI "char \fBlogin\fP (String user, String pass)"
 .br
 .RI "Login to RMIService\&. "
+.ti -1c
+.RI "void \fBcreateUser\fP (String user, String pass, String email)"
+.br
+.RI "RMI create user method call\&. "
+.ti -1c
+.RI "void \fBtransaction\fP (String user1, String user2, long money, String accNum1, String accNum2)"
+.br
+.RI "RMI transaction method call\&. "
+.ti -1c
+.RI "int \fBcreateBankAccount\fP (String user)"
+.br
+.RI "RMI create bank account method call\&. "
+.ti -1c
+.RI "void \fBaddFunds\fP (String user, String accNum, long money)"
+.br
+.RI "RMI add funds method call\&. "
+.ti -1c
+.RI "void \fBdeleteBankAccount\fP (String user, String accNum1, String accNum2)"
+.br
+.RI "RMI delete bank account method call\&. "
+.ti -1c
+.RI "void \fBdeleteAccount\fP (String user)"
+.br
+.RI "RMI delete account method call\&. "
+.ti -1c
+.RI "\fBUser\fP \fBgetUser\fP (String user)"
+.br
+.ti -1c
+.RI "ArrayList< \fBReport\fP > \fBgetReports\fP (int accNum)"
+.br
+.ti -1c
+.RI "ArrayList< \fBUser\fP > \fBgetUsers\fP ()"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -38,7 +71,79 @@ BICHRI
 
 .SH "Member Function Documentation"
 .PP 
-.SS "boolean bankapp\&.client\&.RMIServiceLocator\&.login (String user, String pass)"
+.SS "void bankapp\&.client\&.RMIServiceLocator\&.addFunds (String user, String accNum, long money)"
+
+.PP
+RMI add funds method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIaccNum\fP 
+.br
+\fImoney\fP 
+.RE
+.PP
+
+.SS "int bankapp\&.client\&.RMIServiceLocator\&.createBankAccount (String user)"
+
+.PP
+RMI create bank account method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.RMIServiceLocator\&.createUser (String user, String pass, String email)"
+
+.PP
+RMI create user method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIpass\fP 
+.br
+\fIemail\fP 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.RMIServiceLocator\&.deleteAccount (String user)"
+
+.PP
+RMI delete account method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.RMIServiceLocator\&.deleteBankAccount (String user, String accNum1, String accNum2)"
+
+.PP
+RMI delete bank account method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIaccNum\fP 
+.br
+\fIaccNum2\fP 
+.RE
+.PP
+
+.SS "char bankapp\&.client\&.RMIServiceLocator\&.login (String user, String pass)"
 
 .PP
 Login to RMIService\&. 
@@ -52,7 +157,7 @@ Login to RMIService\&.
 .PP
 \fBReturns:\fP
 .RS 4
-false 
+char 
 .RE
 .PP
 
@@ -68,6 +173,25 @@ set the service of an RMI
 \fIport\fP 
 .br
 \fIserviceName\fP 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.RMIServiceLocator\&.transaction (String user1, String user2, long money, String accNum1, String accNum2)"
+
+.PP
+RMI transaction method call\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser1\fP 
+.br
+\fIuser2\fP 
+.br
+\fImoney\fP 
+.br
+\fIaccNum1\fP 
+.br
+\fIaccNum2\fP 
 .RE
 .PP
 

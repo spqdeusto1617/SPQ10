@@ -1,4 +1,4 @@
-.TH "bankapp.server.BManager" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.TH "bankapp.server.BManager" 3 "Wed May 24 2017" "BankApp" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,9 +17,36 @@ Inherits UnicastRemoteObject, and \fBbankapp\&.server\&.IBManager\fP\&.
 .br
 .RI "\fBBManager\fP Constructor and also store an new user\&. "
 .ti -1c
-.RI "boolean \fBlogin\fP (String username, String pass)  throws RemoteException "
+.RI "char \fBlogin\fP (String username, String pass)  throws RemoteException "
 .br
 .RI "Function Login as a bank manager allow or deny access\&. "
+.ti -1c
+.RI "void \fBtransaction\fP (String user1, String user2, long money, String accNum1, String accNum2)  throws RemoteException "
+.br
+.ti -1c
+.RI "int \fBcreateBankAccount\fP (String user)  throws RemoteException "
+.br
+.ti -1c
+.RI "void \fBaddFunds\fP (String user, String accNum, long money)  throws RemoteException "
+.br
+.ti -1c
+.RI "void \fBdeleteBankAccount\fP (String user, String accNum1, String accNum2)  throws RemoteException "
+.br
+.ti -1c
+.RI "void \fBdeleteAccount\fP (String user)  throws RemoteException "
+.br
+.ti -1c
+.RI "void \fBcreateUser\fP (String username, String pass, String email)  throws RemoteException "
+.br
+.ti -1c
+.RI "\fBUser\fP \fBgetUser\fP (String user)"
+.br
+.ti -1c
+.RI "ArrayList< \fBReport\fP > \fBgetReports\fP (int accNum)"
+.br
+.ti -1c
+.RI "ArrayList< \fBUser\fP > \fBgetUsers\fP ()  throws RemoteException "
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -62,7 +89,7 @@ BICHRI
 
 .SH "Member Function Documentation"
 .PP 
-.SS "boolean bankapp\&.server\&.BManager\&.login (String username, String pass) throws RemoteException"
+.SS "char bankapp\&.server\&.BManager\&.login (String username, String pass) throws RemoteException"
 
 .PP
 Function Login as a bank manager allow or deny access\&. 
@@ -76,7 +103,7 @@ Function Login as a bank manager allow or deny access\&.
 .PP
 \fBReturns:\fP
 .RS 4
-false 
+char 
 .RE
 .PP
 \fBExceptions:\fP

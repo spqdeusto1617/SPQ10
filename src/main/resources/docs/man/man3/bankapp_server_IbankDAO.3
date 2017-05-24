@@ -1,41 +1,43 @@
-.TH "bankapp.server.IbankDAO" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.TH "bankapp.server.IBankDAO" 3 "Wed May 24 2017" "BankApp" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-bankapp.server.IbankDAO \- Interface \fBIbankDAO\fP to set function names and params\&.  
+bankapp.server.IBankDAO \- Interface IbankDAO to set function names and params\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
-Inherited by \fBbankapp\&.server\&.bankDAO\fP\&.
+Inherited by \fBbankapp\&.server\&.BankDAO\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBUser\fP \fBgetUser\fP (String username)"
+.RI "\fBAccount\fP \fBgetAccount\fP (String username)"
 .br
 .RI "function name and params "
 .ti -1c
-.RI "void \fBstoreUser\fP (\fBUser\fP user)"
+.RI "void \fBstoreAccount\fP (\fBAccount\fP acc)"
 .br
 .RI "function name and params "
 .ti -1c
-.RI "void \fBupdateUser\fP (\fBUser\fP user)"
+.RI "void \fBstoreReport\fP (\fBReport\fP rep)"
 .br
 .RI "function name and params "
 .ti -1c
-.RI "void \fBstoreAccount\fP (Account acc)"
+.RI "void \fBdeleteAccount\fP (String username)"
 .br
 .RI "function name and params "
 .ti -1c
-.RI "void \fBupdateAccount\fP (Account acc)"
+.RI "ArrayList< \fBReport\fP > \fBgetReports\fP (int accNum)"
 .br
-.RI "function name and params "
+.ti -1c
+.RI "ArrayList< \fBUser\fP > \fBgetUsers\fP ()"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Interface \fBIbankDAO\fP to set function names and params\&. 
+Interface IbankDAO to set function names and params\&. 
 
 
 .PP
@@ -52,7 +54,20 @@ BICHRI
 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBUser\fP bankapp\&.server\&.IbankDAO\&.getUser (String username)"
+.SS "void bankapp\&.server\&.IBankDAO\&.deleteAccount (String username)"
+
+.PP
+function name and params 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIacc\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBbankapp\&.server\&.BankDAO\fP\&.
+.SS "\fBAccount\fP bankapp\&.server\&.IBankDAO\&.getAccount (String username)"
 
 .PP
 function name and params 
@@ -64,13 +79,13 @@ function name and params
 .PP
 \fBReturns:\fP
 .RS 4
-user 
+\fBAccount\fP 
 .RE
 .PP
 
 .PP
-Implemented in \fBbankapp\&.server\&.bankDAO\fP\&.
-.SS "void bankapp\&.server\&.IbankDAO\&.storeAccount (Account acc)"
+Implemented in \fBbankapp\&.server\&.BankDAO\fP\&.
+.SS "void bankapp\&.server\&.IBankDAO\&.storeAccount (\fBAccount\fP acc)"
 
 .PP
 function name and params 
@@ -82,46 +97,20 @@ function name and params
 .PP
 
 .PP
-Implemented in \fBbankapp\&.server\&.bankDAO\fP\&.
-.SS "void bankapp\&.server\&.IbankDAO\&.storeUser (\fBUser\fP user)"
+Implemented in \fBbankapp\&.server\&.BankDAO\fP\&.
+.SS "void bankapp\&.server\&.IBankDAO\&.storeReport (\fBReport\fP rep)"
 
 .PP
 function name and params 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIuser\fP 
+\fIrep\fP 
 .RE
 .PP
 
 .PP
-Implemented in \fBbankapp\&.server\&.bankDAO\fP\&.
-.SS "void bankapp\&.server\&.IbankDAO\&.updateAccount (Account acc)"
-
-.PP
-function name and params 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIacc\fP 
-.RE
-.PP
-
-.PP
-Implemented in \fBbankapp\&.server\&.bankDAO\fP\&.
-.SS "void bankapp\&.server\&.IbankDAO\&.updateUser (\fBUser\fP user)"
-
-.PP
-function name and params 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIuser\fP 
-.RE
-.PP
-
-.PP
-Implemented in \fBbankapp\&.server\&.bankDAO\fP\&.
+Implemented in \fBbankapp\&.server\&.BankDAO\fP\&.
 
 .SH "Author"
 .PP 

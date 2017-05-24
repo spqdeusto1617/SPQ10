@@ -1,41 +1,43 @@
-.TH "bankapp.server.bankDAO" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.TH "bankapp.server.BankDAO" 3 "Wed May 24 2017" "BankApp" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-bankapp.server.bankDAO \- This is the bank DAO Class\&.  
+bankapp.server.BankDAO \- This is the bank DAO Class\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
-Inherits \fBbankapp\&.server\&.IbankDAO\fP\&.
+Inherits \fBbankapp\&.server\&.IBankDAO\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBbankDAO\fP ()"
+.RI "\fBBankDAO\fP ()"
 .br
-.RI "Constractore for class \fBbankDAO\fP\&. "
+.RI "Constractore for class bankDAO\&. "
 .ti -1c
-.RI "\fBUser\fP \fBgetUser\fP (String username)"
+.RI "\fBAccount\fP \fBgetAccount\fP (String username)"
 .br
-.RI "Function to get user identified by a username giving as a param\&. "
+.RI "function name and params "
 .ti -1c
-.RI "void \fBstoreUser\fP (\fBUser\fP user)"
+.RI "void \fBstoreAccount\fP (\fBAccount\fP acc)"
 .br
-.RI "Store a new user\&. "
+.RI "function name and params "
 .ti -1c
-.RI "void \fBupdateUser\fP (\fBUser\fP user)"
+.RI "void \fBstoreReport\fP (\fBReport\fP rep)"
 .br
-.RI "update a existing user "
+.RI "function name and params "
 .ti -1c
-.RI "void \fBstoreAccount\fP (Account acc)"
+.RI "void \fBdeleteAccount\fP (String username)"
 .br
-.RI "Store a new amount\&. "
+.RI "function name and params "
 .ti -1c
-.RI "void \fBupdateAccount\fP (Account acc)"
+.RI "ArrayList< \fBReport\fP > \fBgetReports\fP (int accNum)"
 .br
-.RI "update an existing amount "
+.ti -1c
+.RI "ArrayList< \fBUser\fP > \fBgetUsers\fP ()"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -56,10 +58,23 @@ BICHRI
 
 .SH "Member Function Documentation"
 .PP 
-.SS "\fBUser\fP bankapp\&.server\&.bankDAO\&.getUser (String username)"
+.SS "void bankapp\&.server\&.BankDAO\&.deleteAccount (String username)"
 
 .PP
-Function to get user identified by a username giving as a param\&. 
+function name and params 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIacc\fP 
+.RE
+.PP
+
+.PP
+Implements \fBbankapp\&.server\&.IBankDAO\fP\&.
+.SS "\fBAccount\fP bankapp\&.server\&.BankDAO\&.getAccount (String username)"
+
+.PP
+function name and params 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -68,16 +83,16 @@ Function to get user identified by a username giving as a param\&.
 .PP
 \fBReturns:\fP
 .RS 4
-user 
+\fBAccount\fP 
 .RE
 .PP
 
 .PP
-Implements \fBbankapp\&.server\&.IbankDAO\fP\&.
-.SS "void bankapp\&.server\&.bankDAO\&.storeAccount (Account acc)"
+Implements \fBbankapp\&.server\&.IBankDAO\fP\&.
+.SS "void bankapp\&.server\&.BankDAO\&.storeAccount (\fBAccount\fP acc)"
 
 .PP
-Store a new amount\&. 
+function name and params 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -86,46 +101,20 @@ Store a new amount\&.
 .PP
 
 .PP
-Implements \fBbankapp\&.server\&.IbankDAO\fP\&.
-.SS "void bankapp\&.server\&.bankDAO\&.storeUser (\fBUser\fP user)"
+Implements \fBbankapp\&.server\&.IBankDAO\fP\&.
+.SS "void bankapp\&.server\&.BankDAO\&.storeReport (\fBReport\fP rep)"
 
 .PP
-Store a new user\&. 
+function name and params 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIuser\fP 
+\fIrep\fP 
 .RE
 .PP
 
 .PP
-Implements \fBbankapp\&.server\&.IbankDAO\fP\&.
-.SS "void bankapp\&.server\&.bankDAO\&.updateAccount (Account acc)"
-
-.PP
-update an existing amount 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIacc\fP 
-.RE
-.PP
-
-.PP
-Implements \fBbankapp\&.server\&.IbankDAO\fP\&.
-.SS "void bankapp\&.server\&.bankDAO\&.updateUser (\fBUser\fP user)"
-
-.PP
-update a existing user 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIuser\fP 
-.RE
-.PP
-
-.PP
-Implements \fBbankapp\&.server\&.IbankDAO\fP\&.
+Implements \fBbankapp\&.server\&.IBankDAO\fP\&.
 
 .SH "Author"
 .PP 

@@ -1,8 +1,8 @@
-.TH "bankapp.client.bankController" 3 "Wed May 17 2017" "BankApp" \" -*- nroff -*-
+.TH "bankapp.client.BankController" 3 "Wed May 24 2017" "BankApp" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-bankapp.client.bankController \- This is the bank controller and hundler Class\&.  
+bankapp.client.BankController \- This is the bank controller and hundler Class\&.  
 
 .SH SYNOPSIS
 .br
@@ -11,13 +11,46 @@ bankapp.client.bankController \- This is the bank controller and hundler Class\&
 
 .in +1c
 .ti -1c
-.RI "\fBbankController\fP (String ip, String port, String serviceName)"
+.RI "\fBBankController\fP (String ip, String port, String serviceName)"
 .br
 .RI "Constructor set the service for the RMI\&. "
 .ti -1c
-.RI "boolean \fBlogin\fP (String user, String pass)"
+.RI "char \fBlogin\fP (String user, String pass)"
 .br
 .RI "Login Function Allow or Deny access to the application\&. "
+.ti -1c
+.RI "void \fBcreateUser\fP (String user, String pass, String email)"
+.br
+.RI "Create user method\&. "
+.ti -1c
+.RI "void \fBtransaction\fP (String user1, String user2, long money, String accNum1, String accNum2)"
+.br
+.RI "Make transaction method\&. "
+.ti -1c
+.RI "int \fBcreateBankAccount\fP (String user)"
+.br
+.RI "Create bank account method\&. "
+.ti -1c
+.RI "void \fBaddFunds\fP (String user, String accNum, long money)"
+.br
+.RI "Adds funds to any bank account\&. "
+.ti -1c
+.RI "void \fBdeleteBankAccount\fP (String user, String accNum1, String accNum2)"
+.br
+.RI "Deletes bank account\&. "
+.ti -1c
+.RI "void \fBdeleteAccount\fP (String user)"
+.br
+.RI "Deletes account\&. "
+.ti -1c
+.RI "\fBUser\fP \fBgetUser\fP (String user)"
+.br
+.ti -1c
+.RI "ArrayList< \fBReport\fP > \fBgetReports\fP (int accNum)"
+.br
+.ti -1c
+.RI "ArrayList< \fBUser\fP > \fBgetUsers\fP ()"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -38,7 +71,7 @@ BICHRI
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "bankapp\&.client\&.bankController\&.bankController (String ip, String port, String serviceName)"
+.SS "bankapp\&.client\&.BankController\&.BankController (String ip, String port, String serviceName)"
 
 .PP
 Constructor set the service for the RMI\&. 
@@ -55,7 +88,79 @@ Constructor set the service for the RMI\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "boolean bankapp\&.client\&.bankController\&.login (String user, String pass)"
+.SS "void bankapp\&.client\&.BankController\&.addFunds (String user, String accNum, long money)"
+
+.PP
+Adds funds to any bank account\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIaccNum\fP 
+.br
+\fImoney\fP 
+.RE
+.PP
+
+.SS "int bankapp\&.client\&.BankController\&.createBankAccount (String user)"
+
+.PP
+Create bank account method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.BankController\&.createUser (String user, String pass, String email)"
+
+.PP
+Create user method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIpass\fP 
+.br
+\fIemail\fP 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.BankController\&.deleteAccount (String user)"
+
+.PP
+Deletes account\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.BankController\&.deleteBankAccount (String user, String accNum1, String accNum2)"
+
+.PP
+Deletes bank account\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIaccNum\fP 
+.br
+\fIaccNum2\fP 
+.RE
+.PP
+
+.SS "char bankapp\&.client\&.BankController\&.login (String user, String pass)"
 
 .PP
 Login Function Allow or Deny access to the application\&. 
@@ -69,7 +174,26 @@ Login Function Allow or Deny access to the application\&.
 .PP
 \fBReturns:\fP
 .RS 4
-true 
+char 
+.RE
+.PP
+
+.SS "void bankapp\&.client\&.BankController\&.transaction (String user1, String user2, long money, String accNum1, String accNum2)"
+
+.PP
+Make transaction method\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser1\fP 
+.br
+\fIuser2\fP 
+.br
+\fImoney\fP 
+.br
+\fIaccNum1\fP 
+.br
+\fIaccNum2\fP 
 .RE
 .PP
 

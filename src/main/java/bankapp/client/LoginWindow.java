@@ -21,7 +21,11 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.EventQueue;
-
+/**
+ *@author BICHRI
+ *@date 05-17-2017
+ *@brief This is the LoginWindow Class
+ */
 
 public class LoginWindow extends JFrame {
 
@@ -38,6 +42,7 @@ public class LoginWindow extends JFrame {
 
 
 	/**
+	 * @param args
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -56,6 +61,7 @@ public class LoginWindow extends JFrame {
 	}
 
 	/**
+	 * @param bc
 	 * Create the frame.
 	 */
 	public LoginWindow(final BankController bc) {

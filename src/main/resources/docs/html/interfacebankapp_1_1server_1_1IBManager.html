@@ -85,23 +85,50 @@ Inheritance diagram for bankapp.server.IBManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29f3426c104732dda17dc8b215b746e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacebankapp_1_1server_1_1IBManager.html#a29f3426c104732dda17dc8b215b746e1">login</a> (String user, String pass)  throws RemoteException</td></tr>
-<tr class="memdesc:a29f3426c104732dda17dc8b215b746e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">function name and params  <a href="#a29f3426c104732dda17dc8b215b746e1">More...</a><br /></td></tr>
-<tr class="separator:a29f3426c104732dda17dc8b215b746e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96bce16e21db1585eb42a5ef55b43050"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacebankapp_1_1server_1_1IBManager.html#a96bce16e21db1585eb42a5ef55b43050">login</a> (String user, String pass)  throws RemoteException</td></tr>
+<tr class="memdesc:a96bce16e21db1585eb42a5ef55b43050"><td class="mdescLeft">&#160;</td><td class="mdescRight">function name and params  <a href="#a96bce16e21db1585eb42a5ef55b43050">More...</a><br /></td></tr>
+<tr class="separator:a96bce16e21db1585eb42a5ef55b43050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed6af471750f7c721d45ead983bef5d"><td class="memItemLeft" align="right" valign="top"><a id="a6ed6af471750f7c721d45ead983bef5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>transaction</b> (String user1, String user2, long money, String accNum1, String accNum2)  throws RemoteException</td></tr>
+<tr class="separator:a6ed6af471750f7c721d45ead983bef5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb423a1ba2348fdaa7d1466a907e82e1"><td class="memItemLeft" align="right" valign="top"><a id="aeb423a1ba2348fdaa7d1466a907e82e1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>createBankAccount</b> (String user)  throws RemoteException</td></tr>
+<tr class="separator:aeb423a1ba2348fdaa7d1466a907e82e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f275bed15b74bb2bc6ef43ede7f7f8"><td class="memItemLeft" align="right" valign="top"><a id="a31f275bed15b74bb2bc6ef43ede7f7f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFunds</b> (String user, String accNum, long money)  throws RemoteException</td></tr>
+<tr class="separator:a31f275bed15b74bb2bc6ef43ede7f7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1a8e3d663126a894a7c074f35e49d3"><td class="memItemLeft" align="right" valign="top"><a id="a7b1a8e3d663126a894a7c074f35e49d3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteBankAccount</b> (String user, String accNum1, String accNum2)  throws RemoteException</td></tr>
+<tr class="separator:a7b1a8e3d663126a894a7c074f35e49d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f1aee23930d78375c12496e9f47cdf"><td class="memItemLeft" align="right" valign="top"><a id="aa1f1aee23930d78375c12496e9f47cdf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteAccount</b> (String user)  throws RemoteException</td></tr>
+<tr class="separator:aa1f1aee23930d78375c12496e9f47cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b3ca29b50f7c662e360a47cea220ae"><td class="memItemLeft" align="right" valign="top"><a id="a09b3ca29b50f7c662e360a47cea220ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>createUser</b> (String username, String pass, String email)  throws RemoteException</td></tr>
+<tr class="separator:a09b3ca29b50f7c662e360a47cea220ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18675531965999da7f6be8604c48b17f"><td class="memItemLeft" align="right" valign="top"><a id="a18675531965999da7f6be8604c48b17f"></a>
+<a class="el" href="classbankapp_1_1server_1_1User.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUser</b> (String user)  throws RemoteException</td></tr>
+<tr class="separator:a18675531965999da7f6be8604c48b17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689f770beb19171014ab9c2bf207a857"><td class="memItemLeft" align="right" valign="top"><a id="a689f770beb19171014ab9c2bf207a857"></a>
+ArrayList&lt; <a class="el" href="classbankapp_1_1server_1_1Report.html">Report</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReports</b> (int accNum)  throws RemoteException</td></tr>
+<tr class="separator:a689f770beb19171014ab9c2bf207a857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8550de54f2b1eb875838fe99d83c80f"><td class="memItemLeft" align="right" valign="top"><a id="ae8550de54f2b1eb875838fe99d83c80f"></a>
+ArrayList&lt; <a class="el" href="classbankapp_1_1server_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getUsers</b> ()  throws RemoteException</td></tr>
+<tr class="separator:ae8550de54f2b1eb875838fe99d83c80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface <a class="el" href="interfacebankapp_1_1server_1_1IBManager.html" title="Interface IBManager extends Remote to set function names and params. ">IBManager</a> extends Remote to set function names and params. </p>
 <dl class="section author"><dt>Author</dt><dd>BICHRI </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>05-17-2017 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a29f3426c104732dda17dc8b215b746e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29f3426c104732dda17dc8b215b746e1">&#9670;&nbsp;</a></span>login()</h2>
+<a id="a96bce16e21db1585eb42a5ef55b43050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96bce16e21db1585eb42a5ef55b43050">&#9670;&nbsp;</a></span>login()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean bankapp.server.IBManager.login </td>
+          <td class="memname">char bankapp.server.IBManager.login </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"><em>user</em>, </td>
@@ -136,7 +163,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classbankapp_1_1server_1_1BManager.html#abdeb5e23b534babeed067c3667fcafd3">bankapp.server.BManager</a>.</p>
+<p>Implemented in <a class="el" href="classbankapp_1_1server_1_1BManager.html#a3840891c318887cef8ed2f7c193cfba9">bankapp.server.BManager</a>.</p>
 
 </div>
 </div>

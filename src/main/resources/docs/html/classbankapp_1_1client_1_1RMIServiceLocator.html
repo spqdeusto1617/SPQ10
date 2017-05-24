@@ -79,23 +79,235 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a1605fa6be3933008e90db56b804007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a9a1605fa6be3933008e90db56b804007">setService</a> (String ip, String port, String serviceName)</td></tr>
 <tr class="memdesc:a9a1605fa6be3933008e90db56b804007"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the service of an RMI  <a href="#a9a1605fa6be3933008e90db56b804007">More...</a><br /></td></tr>
 <tr class="separator:a9a1605fa6be3933008e90db56b804007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2287058ad6e7eaa5b38303c02102d740"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a2287058ad6e7eaa5b38303c02102d740">login</a> (String user, String pass)</td></tr>
-<tr class="memdesc:a2287058ad6e7eaa5b38303c02102d740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login to RMIService.  <a href="#a2287058ad6e7eaa5b38303c02102d740">More...</a><br /></td></tr>
-<tr class="separator:a2287058ad6e7eaa5b38303c02102d740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bc46140110e3c475161826d8fcc7f6"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a47bc46140110e3c475161826d8fcc7f6">login</a> (String user, String pass)</td></tr>
+<tr class="memdesc:a47bc46140110e3c475161826d8fcc7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login to RMIService.  <a href="#a47bc46140110e3c475161826d8fcc7f6">More...</a><br /></td></tr>
+<tr class="separator:a47bc46140110e3c475161826d8fcc7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b779bfb8f6496cf993628de40d2eb2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a2b779bfb8f6496cf993628de40d2eb2c">createUser</a> (String user, String pass, String email)</td></tr>
+<tr class="memdesc:a2b779bfb8f6496cf993628de40d2eb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI create user method call.  <a href="#a2b779bfb8f6496cf993628de40d2eb2c">More...</a><br /></td></tr>
+<tr class="separator:a2b779bfb8f6496cf993628de40d2eb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734fb387c73fafb0f97726c2d726b081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a734fb387c73fafb0f97726c2d726b081">transaction</a> (String user1, String user2, long money, String accNum1, String accNum2)</td></tr>
+<tr class="memdesc:a734fb387c73fafb0f97726c2d726b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI transaction method call.  <a href="#a734fb387c73fafb0f97726c2d726b081">More...</a><br /></td></tr>
+<tr class="separator:a734fb387c73fafb0f97726c2d726b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c71c5ae11c150052b2eb117a762fd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a45c71c5ae11c150052b2eb117a762fd2">createBankAccount</a> (String user)</td></tr>
+<tr class="memdesc:a45c71c5ae11c150052b2eb117a762fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI create bank account method call.  <a href="#a45c71c5ae11c150052b2eb117a762fd2">More...</a><br /></td></tr>
+<tr class="separator:a45c71c5ae11c150052b2eb117a762fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f6ebe5f11ad19a3f5143137787e5aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a36f6ebe5f11ad19a3f5143137787e5aa">addFunds</a> (String user, String accNum, long money)</td></tr>
+<tr class="memdesc:a36f6ebe5f11ad19a3f5143137787e5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI add funds method call.  <a href="#a36f6ebe5f11ad19a3f5143137787e5aa">More...</a><br /></td></tr>
+<tr class="separator:a36f6ebe5f11ad19a3f5143137787e5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da5c7b6d76966462b70743b5bd7f90f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a5da5c7b6d76966462b70743b5bd7f90f">deleteBankAccount</a> (String user, String accNum1, String accNum2)</td></tr>
+<tr class="memdesc:a5da5c7b6d76966462b70743b5bd7f90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI delete bank account method call.  <a href="#a5da5c7b6d76966462b70743b5bd7f90f">More...</a><br /></td></tr>
+<tr class="separator:a5da5c7b6d76966462b70743b5bd7f90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfd35bd2106b28dc998bf1cc5aac679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbankapp_1_1client_1_1RMIServiceLocator.html#a0cfd35bd2106b28dc998bf1cc5aac679">deleteAccount</a> (String user)</td></tr>
+<tr class="memdesc:a0cfd35bd2106b28dc998bf1cc5aac679"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMI delete account method call.  <a href="#a0cfd35bd2106b28dc998bf1cc5aac679">More...</a><br /></td></tr>
+<tr class="separator:a0cfd35bd2106b28dc998bf1cc5aac679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae903c5739b919d9d3d9253ca5dde37e6"><td class="memItemLeft" align="right" valign="top"><a id="ae903c5739b919d9d3d9253ca5dde37e6"></a>
+<a class="el" href="classbankapp_1_1server_1_1User.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUser</b> (String user)</td></tr>
+<tr class="separator:ae903c5739b919d9d3d9253ca5dde37e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47da093114fcd0cde5c88594359e0411"><td class="memItemLeft" align="right" valign="top"><a id="a47da093114fcd0cde5c88594359e0411"></a>
+ArrayList&lt; <a class="el" href="classbankapp_1_1server_1_1Report.html">Report</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReports</b> (int accNum)</td></tr>
+<tr class="separator:a47da093114fcd0cde5c88594359e0411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa214faa1b2a9170384d8d591236ba55"><td class="memItemLeft" align="right" valign="top"><a id="aaa214faa1b2a9170384d8d591236ba55"></a>
+ArrayList&lt; <a class="el" href="classbankapp_1_1server_1_1User.html">User</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getUsers</b> ()</td></tr>
+<tr class="separator:aaa214faa1b2a9170384d8d591236ba55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the bank RMIServices hundler Class. </p>
 <dl class="section author"><dt>Author</dt><dd>BICHRI </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>05-17-2017 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2287058ad6e7eaa5b38303c02102d740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2287058ad6e7eaa5b38303c02102d740">&#9670;&nbsp;</a></span>login()</h2>
+<a id="a36f6ebe5f11ad19a3f5143137787e5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f6ebe5f11ad19a3f5143137787e5aa">&#9670;&nbsp;</a></span>addFunds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean bankapp.client.RMIServiceLocator.login </td>
+          <td class="memname">void bankapp.client.RMIServiceLocator.addFunds </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>accNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>money</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI add funds method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">accNum</td><td></td></tr>
+    <tr><td class="paramname">money</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45c71c5ae11c150052b2eb117a762fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c71c5ae11c150052b2eb117a762fd2">&#9670;&nbsp;</a></span>createBankAccount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int bankapp.client.RMIServiceLocator.createBankAccount </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI create bank account method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a2b779bfb8f6496cf993628de40d2eb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b779bfb8f6496cf993628de40d2eb2c">&#9670;&nbsp;</a></span>createUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bankapp.client.RMIServiceLocator.createUser </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>pass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>email</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI create user method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">pass</td><td></td></tr>
+    <tr><td class="paramname">email</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0cfd35bd2106b28dc998bf1cc5aac679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfd35bd2106b28dc998bf1cc5aac679">&#9670;&nbsp;</a></span>deleteAccount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bankapp.client.RMIServiceLocator.deleteAccount </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI delete account method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5da5c7b6d76966462b70743b5bd7f90f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da5c7b6d76966462b70743b5bd7f90f">&#9670;&nbsp;</a></span>deleteBankAccount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bankapp.client.RMIServiceLocator.deleteBankAccount </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>accNum1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>accNum2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI delete bank account method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">accNum</td><td></td></tr>
+    <tr><td class="paramname">accNum2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47bc46140110e3c475161826d8fcc7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47bc46140110e3c475161826d8fcc7f6">&#9670;&nbsp;</a></span>login()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char bankapp.client.RMIServiceLocator.login </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"><em>user</em>, </td>
@@ -122,7 +334,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>char </dd></dl>
 
 </div>
 </div>
@@ -164,6 +376,64 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">ip</td><td></td></tr>
     <tr><td class="paramname">port</td><td></td></tr>
     <tr><td class="paramname">serviceName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a734fb387c73fafb0f97726c2d726b081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734fb387c73fafb0f97726c2d726b081">&#9670;&nbsp;</a></span>transaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bankapp.client.RMIServiceLocator.transaction </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>user2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>money</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>accNum1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>accNum2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RMI transaction method call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user1</td><td></td></tr>
+    <tr><td class="paramname">user2</td><td></td></tr>
+    <tr><td class="paramname">money</td><td></td></tr>
+    <tr><td class="paramname">accNum1</td><td></td></tr>
+    <tr><td class="paramname">accNum2</td><td></td></tr>
   </table>
   </dd>
 </dl>

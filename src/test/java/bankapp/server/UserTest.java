@@ -1,16 +1,31 @@
-package test.java.bankapp.server;
+package bankapp.server;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
+import org.junit.Rule;
 import org.junit.Test;
+
+import junit.framework.JUnit4TestAdapter;
 /**
  *@author BICHRI
  *@date 05-17-2017
  *@brief This is the UserTest class 
  */
 public class UserTest {
-
+	
+    @Rule public ContiPerfRule rule = new ContiPerfRule();
+	
+	public static junit.framework.Test suite() {
+		 return new JUnit4TestAdapter(UserTest.class);
+	}
+	
+	@PerfTest(invocations = 1000, threads = 20)
+	@Required(throughput = 20)
     @Test
     /**
      * @brief create valid user 
@@ -26,6 +41,8 @@ public class UserTest {
         assertThat(user.getAccount(accNum).getnumAcc(), is(accountnum));
     }
 
+    @PerfTest(invocations = 1000, threads = 20)
+    @Required(average = 50)
     @Test
     /**
      * @brief test the add funds 
@@ -36,7 +53,8 @@ public class UserTest {
         String accNum = Integer.toString(accountnum);
         user.addFundstoAccount(accNum, 250);
     }
-    
+
+    @PerfTest(duration = 10000)
     @Test
     /**
      * @brief test a transaction

@@ -1,4 +1,4 @@
-package test.java.bankapp.server;
+package bankapp.server;
 /**
  *@author BICHRI
  *@date 05-17-2017

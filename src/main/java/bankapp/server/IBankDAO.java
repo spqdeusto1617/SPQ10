@@ -1,6 +1,7 @@
 package bankapp.server;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *@author BICHRI
@@ -9,28 +10,35 @@ import java.util.ArrayList;
  */
 public interface IBankDAO {
 	/**
-	 * @brief function name and params
+	 * @brief Gets account with the passed username from the database
 	 * @param username
 	 * @return Account
 	 */
 	public Account getAccount(String username); 
 	/**
-	 * @brief function name and params
+	 * @brief Stores account passed through parameters into the database
 	 * @param acc
 	 */
 	public void storeAccount(Account acc);
 	/**
-	 * @brief function name and params
+	 * @brief Stores report passed through parameters into the database
 	 * @param rep
 	 */
 	public void storeReport(Report rep);
 	/**
-	 * @brief function name and params
-	 * @param acc
+	 * @brief Deletes account with the passed username from the database
+	 * @param username
 	 */
 	public void deleteAccount(String username);
-	
+	/**
+	 * @brief Gets reports from the account that has the number entered as parameters
+	 * @param accNum
+	 * @return ArrayList
+	 */
 	public ArrayList<Report> getReports(int accNum);
-	
-	public ArrayList<User> getUsers();
+	/**
+	 * @brief Gets a list of all users from the database
+	 * @return ArrayList
+	 */
+	public List<Account> getUsers();
 }

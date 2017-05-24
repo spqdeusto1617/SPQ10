@@ -8,17 +8,25 @@ import java.util.Scanner;
  * @date 05-17-2017
  * 
  * @brief This is the main Login Class
- *
+ * 
+ * @mainpage Bank application as a project for SOFTWARE PROCESS AND QUALITY 
+ * 
+ * @warning This code is Just a school project, not for professional use 
+ * 
+ * @copyright Free license 
+ * 
+ * @section intro_sec Introduction
+ * 
+ * this an apllication to help users and managers do their banking tasks easily 
+ * 
+ * @section compile_sec Compilation
+ * know how to compile the code using maven 
  * 
  */
 
 public class BankClient {
 
 @SuppressWarnings("resource")
-/**
- * @brief main fuction that will print outputs and get inputs to identify the user
- * @param args
- */
 	public static void main(String[] args) {
 		//keyboard input
 		Scanner keyboard = new Scanner(System.in);

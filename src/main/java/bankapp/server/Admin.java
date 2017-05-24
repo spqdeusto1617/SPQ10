@@ -10,7 +10,7 @@ import javax.jdo.annotations.*;
 @Inheritance(strategy=InheritanceStrategy.SUPERCLASS_TABLE)
 public class Admin extends Account{
 	/**
-	 * @brief Constructor
+	 * @brief Admin constructor
 	 * @param username
 	 * @param pass
 	 */

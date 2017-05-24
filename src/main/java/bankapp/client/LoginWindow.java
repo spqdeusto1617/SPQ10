@@ -21,11 +21,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.EventQueue;
-/**
- *@author BICHRI
- *@date 05-17-2017
- *@brief This is the LoginWindow Class
- */
+
 
 public class LoginWindow extends JFrame {
 
@@ -39,10 +35,10 @@ public class LoginWindow extends JFrame {
 	private JLabel lblUsernameOrPassword = new JLabel();
 	private static BankController bc;
 	private static LoginWindow frame = new LoginWindow(bc);
-
+	private int counter = 0;
+	private long timeBlock = 0;
 
 	/**
-	 * @param args
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -61,7 +57,6 @@ public class LoginWindow extends JFrame {
 	}
 
 	/**
-	 * @param bc
 	 * Create the frame.
 	 */
 	public LoginWindow(final BankController bc) {
@@ -137,20 +132,31 @@ public class LoginWindow extends JFrame {
 
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
+				counter++;
 				String name=textFieldUsername.getText(), pass=passwordFieldPassword.getText();
 				//if(eb.login(name,pass)==true){
-				if(bc.login(name,pass)=='u'){
-					try {
+				if(counter < 4){
+				char login = bc.login(name,pass);
+				if(login=='u'){
 						UserWindow bank=new UserWindow(bc, name);
 						bank.setVisible(true);
 						setVisible(false);
-					} catch (Exception e2) {
-						
-					}
-
-				}else{
+				}else if(login=='a'){
+						AdminWindow bank=new AdminWindow(bc);
+						bank.setVisible(true);
+						setVisible(false);
+				}else if(login == 'e'){
 					lblUsernameOrPassword.setText("Username or Password incorrect. Try again.");
 					lblUsernameOrPassword.setVisible(true);
+				}
+				}else if(counter == 4){
+					lblUsernameOrPassword.setText("Too many login tries. Try again in 20 seconds");
+					timeBlock = System.currentTimeMillis();
+				}
+				else{
+					if(System.currentTimeMillis() - timeBlock > 20000)
+						counter = 0;
+					else lblUsernameOrPassword.setText("Too many login tries Try again in " + (20 - ((System.currentTimeMillis() - timeBlock)/1000)) + " seconds");    	
 				}
 				frame.repaint();
 			}

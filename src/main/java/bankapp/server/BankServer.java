@@ -9,7 +9,7 @@ import java.rmi.Naming;
  */
 public class BankServer {
 	/**
-	 * @brief main function that will do the server hundling
+	 * @brief main function that will do the server handling
 	 * @param args
 	 */
 	public static void main(String args[]) {

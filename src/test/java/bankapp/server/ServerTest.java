@@ -1,4 +1,4 @@
-package test.java.bankapp.server;
+package bankapp.server;
 
 import static org.junit.Assert.assertTrue;
 

@@ -4,7 +4,9 @@ import java.net.MalformedURLException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.List;
 
+import bankapp.server.Account;
 import bankapp.server.IBManager;
 import bankapp.server.Report;
 import bankapp.server.User;
@@ -114,9 +116,9 @@ public class RMIServiceLocator {
 	 * @param accNum
 	 * @param accNum2
 	 */
-	public void deleteBankAccount(String user, String accNum1, String accNum2){
+	public void deleteBankAccount(String user, String accNum1){
 		try {
-			bm.deleteBankAccount(user, accNum1, accNum2);
+			bm.deleteBankAccount(user, accNum1);
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -155,7 +157,7 @@ public class RMIServiceLocator {
 		return null;
 	}
 	
-	public ArrayList<User> getUsers(){
+	public List<Account> getUsers(){
 		try {
 			return bm.getUsers();
 		} catch (RemoteException e) {

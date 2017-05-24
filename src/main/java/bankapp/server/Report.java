@@ -26,7 +26,7 @@ public class Report implements Serializable {
 	private int id;
 	private static int reports = 0;
 	/**
-	 * @brief constractor
+	 * @brief Report constructor
 	 * @param user1
 	 * @param user2
 	 * @param money

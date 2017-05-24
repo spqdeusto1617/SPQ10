@@ -3,6 +3,7 @@ package bankapp.client;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.GroupLayout;
@@ -16,40 +17,20 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
 
-import bankapp.server.User;
-/**
- * @author BICHRI
- * 
- * @date 05-17-2017
- * 
- * @brief This is the AdminWindow Class
- * 
- * @mainpage Bank application as a project for SOFTWARE PROCESS AND QUALITY 
- * 
- * @warning This code is Just a school project, not for professional use 
- * 
- * @copyright Free license 
- * 
- * @section intro_sec Introduction
- * 
- * this an apllication to help users and managers to do their daily tasks easily 
- * 
- * @section compile_sec Compilation
- * know how to compile the code using maven 
- * 
- */
+import bankapp.server.Account;
+
 public class AdminWindow extends JFrame {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private javax.swing.DefaultListModel<User> userList = new DefaultListModel<User>();
+	private javax.swing.DefaultListModel<Account> userList = new DefaultListModel<Account>();
 	private JPanel contentPane;
 	private JTextField userTextField;
 	private JTextField passTextField;
 	private JTextField emailTextField;
-	private JList<User> userJList;
+	private JList<Account> userJList;
 
 	/**
 	 * Launch the application.
@@ -58,7 +39,6 @@ public class AdminWindow extends JFrame {
 	}
 
 	/**
-	 * @param bc
 	 * Create the frame.
 	 */
 	public AdminWindow(final BankController bc) {
@@ -68,7 +48,7 @@ public class AdminWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		userJList = new JList<User>();
+		userJList = new JList<Account>();
 		
 		JLabel lblUserAccounts = new JLabel("User Accounts");
 		
@@ -96,7 +76,8 @@ public class AdminWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				bc.createUser(userTextField.getText(), passTextField.getText(), emailTextField.getText());
-				accountList(bc.getUsers());
+				List<Account> accounts = bc.getUsers();
+				accountList(accounts);
 			}
 			
 		});
@@ -108,7 +89,9 @@ public class AdminWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				bc.deleteAccount(userJList.getSelectedValue().getUsername());
-				accountList(bc.getUsers());
+				System.out.println("Deleting user: " + userJList.getSelectedValue() );
+				List<Account> accounts = bc.getUsers();
+				accountList(accounts);
 			}
 			
 		});
@@ -170,15 +153,14 @@ public class AdminWindow extends JFrame {
 							.addContainerGap())))
 		);
 		contentPane.setLayout(gl_contentPane);
-		accountList(bc.getUsers());
+		List<Account> accounts = bc.getUsers();
+		accountList(accounts);
 	}
-	/**
-	 * Show account list for a user
-	 * @param user
-	 */
-	private void accountList(ArrayList<User> users){
+	
+	private void accountList(List<Account> users){
 		userList.clear();
-		for (User user : users) {
+		for (Account user : users) {
+			System.out.println(user.getUsername());
 			userList.addElement(user);
 		}
 		userJList.setModel(userList);

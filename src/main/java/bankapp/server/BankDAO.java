@@ -125,7 +125,7 @@ public class BankDAO implements IBankDAO {
 				
 				Transaction tx = pm.currentTransaction();
 				ArrayList<Report> reports = new ArrayList<Report>();
-					System.out.println("   * Retrieving an Extent for Report.");
+					System.out.println("   * Retrieving an Extent for Reports.");
 					
 					tx.begin();
 					System.out.println("Retrieving reports for " + accNum );
@@ -142,9 +142,7 @@ public class BankDAO implements IBankDAO {
 		    		}
 		    		return reports;
 	}
-
-	@Override
-	public ArrayList<User> getUsers() {// TODO Auto-generated method stub
+	public List<Account> getUsers() {// TODO Auto-generated method stub
 		PersistenceManager pm = pmf.getPersistenceManager();
 		/* By default only 1 level is retrieved from the db
 		 * so if we wish to fetch more than one level, we must indicate it
@@ -152,22 +150,17 @@ public class BankDAO implements IBankDAO {
 		pm.getFetchPlan().setMaxFetchDepth(10);
 		
 		Transaction tx = pm.currentTransaction();
-		ArrayList<User> users = new ArrayList<User>();
-			System.out.println("   * Retrieving an Extent for Report.");
+			System.out.println("   * Retrieving an Extent for Users.");
 			
 			tx.begin();
-			System.out.println("Retrieving users ");
-			Query<?> query = pm.newQuery("SELECT * FROM " + User.class.getName());
+			Query<?> query = pm.newQuery(User.class);
 			@SuppressWarnings("unchecked")
-			List<User> usersList =	(List<User>) query.executeList();
+			List<Account> accountList =	(List<Account>) query.execute();
 			tx.commit();			
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
 	    	}
     		pm.close();
-    		for(User user : usersList){
-    			users.add(user);
-    		}
-    		return users;
+    		return accountList;
 	}
 }

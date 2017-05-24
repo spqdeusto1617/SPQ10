@@ -65,4 +65,7 @@ public class User extends Account implements Serializable{
 	public HashMap<String, BankAccount> getAccounts(){
 		return this.accounts;
 	}
+	public String toString(){
+		return this.getUsername();
+	}
 }

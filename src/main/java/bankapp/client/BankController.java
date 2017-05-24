@@ -1,7 +1,9 @@
 package bankapp.client;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import bankapp.server.Account;
 import bankapp.server.Report;
 import bankapp.server.User;
 
@@ -81,8 +83,8 @@ public class BankController {
 	 * @param accNum
 	 * @param accNum2
 	 */
-	public void deleteBankAccount(String user, String accNum1, String accNum2){
-		rsl.deleteBankAccount(user, accNum1, accNum2);
+	public void deleteBankAccount(String user, String accNum1){
+		rsl.deleteBankAccount(user, accNum1);
 	}
 	/**
 	 * @brief Deletes account
@@ -97,10 +99,9 @@ public class BankController {
 	}
 	
 	public ArrayList<Report> getReports(int accNum){
-		System.out.println("Getting reports");
 		return rsl.getReports(accNum);
 	}
-	public ArrayList<User> getUsers(){
+	public List<Account> getUsers(){
 		System.out.println("Retrieving users");
 		return rsl.getUsers();
 	}
